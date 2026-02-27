@@ -1,0 +1,8 @@
+# ============================================================
+# 200 Mates — .gitignore
+# ============================================================
+
+# ── Base de datos / Supabase ──────────────────────────────────
+# El schema no tiene credenciales pero no tiene sentido versionarlo
+supabase-schema
+*.sql
