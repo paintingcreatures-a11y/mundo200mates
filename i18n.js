@@ -22,13 +22,10 @@ const i18n = {
     gpsNoGps:         "⚠️ GPS no disponible — ingresá tu país manualmente.",
     gpsNoPermission:  "⚠️ Sin GPS — ingresá tu país manualmente.",
     gpsManual:        " — escribí tu país",
-    gpsSelected:        "País seleccionado: ", //Que hace esto? Nunca lo vi aparecer, si no aparece nunca eliminar
-   // labelCountry:     "País*",
-   // labelYerba:       "Yerba *",
+    gpsSelected:        "País seleccionado: ", 
    labelPrep:           "Estilo favorito*",
    labelMateType:       "Tipo de mate",
    labelPhoto:          "Foto *",
-   // optional:         "opcional",
     placeholderName:    "Nombre*",
     placeholderCountry: "País*",
     placeholderYerba:   "Marca de yerba*",
@@ -36,11 +33,10 @@ const i18n = {
     bitter:           "Amargo",
     sweet:            "Dulce",
     terere:           "Tereré",
-    brewedMateTea:    "Mate Cocido", //Ver de agregarlo
+    brewedMateTea:    "Mate Cocido", 
     fileDropText:     "Arrastrá o hacé clic para subir",
     fileDropSub:      "JPG, PNG — máx 5MB",
     submitBtn:        "Enviar",
-   // submitBtnLoading: "Enviando…",
 
     // Alerts
     alertRequired:    "Por favor completá los campos obligatorios y adjuntá una foto.",
@@ -48,9 +44,8 @@ const i18n = {
     alertError:       "Error al enviar: ",
 
     // Gallery & lightbox
-    // noMates:          "¡Sé el primero en cebar un mate! 🧉",
     errorLoading:     "Error cargando mates.",
-    anonymous:        "Anónimo", //Que hace esto? Nunca lo vi aparecer, si no aparece nunca eliminar
+    anonymous:        "Anónimo", 
     mateId:           "#: ",
     copyId:           "copiar", 
     copied:           "copiado",
@@ -74,7 +69,7 @@ const i18n = {
 
     // Support
     supportText1:     "Por ahora, todos los recursos que usamos son gratuitos, pero en el futuro podría ser necesario migrar a plataformas de pago. Cuando eso ocurra, habrá una opción de donación para ayudar a mantener el sitio activo.",
-    supportText2:     `Mientras tanto, la forma más valiosa en que nos podés ayudar es mejorando las traducciones. Si tenés sugerencias, ¡enviánoslas a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    supportText2:     `Mientras tanto, la forma más valiosa en que nos podés ayudar es mejorando las traducciones. Si tenés sugerencias, ¡envíala a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
   
     // Moderation
     modText1:         "Antes de aparecer en el mapa, todos los registros son revisados por un pequeño grupo de voluntarios. Esto nos ayuda a que el contenido sea seguro, respetuoso y que todos podamos disfrutar del proyecto.",
@@ -89,28 +84,22 @@ const i18n = {
     pressText1:       "¿Sos periodista o creador de contenido y querés escribir sobre este proyecto? ¡Nos encantaría que lo hagas!",
 
     // FAQs
-    //faqTitle:       "Preguntas Frecuentes",
     faq1q:            "¿Por qué no veo mi registro en el mapa?",
     faq1a:            "No te preocupes, en la mayoría de los casos es porque todavía no hemos tenido tiempo de revisarlo. Todos los registros son revisados por un pequeño grupo de voluntarios antes de aparecer en el mapa, para asegurarnos de que sean respetuosos y seguros. Tan pronto como lo revisemos, aparecerá en el mapa.",
    
     faq2q:            "¿Puedo eliminar mi registro?",
-    faq2a:            `Sí, claro. Si querés que eliminemos tu registro, envíanos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! con el # de tu registro y el asunto "Eliminar mi registro". Lo borraremos lo antes posible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    faq2a:            `Sí, claro. Si querés que eliminemos tu registro, envíanos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> con el # de tu registro y el asunto "Eliminar mi registro". Lo borraremos lo antes posible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     faq3q:            "¿Qué datos se recopilan?",
     faq3a:            "Solo usamos la información que compartís en el formulario, la ubicación que decidiste mostrar en el mapa y la fecha y hora de envío. No recolectamos ningún otro dato personal.",
 
     // Terms
-    //termsTitle:       "Términos de Uso",
-    //termsSub:         "Última actualización: febrero 2026",
     terms1title:      "Condiciones de Uso",
     terms1text:       "Al usar nuestros servicios, aceptas nuestras Condiciones de Uso y nuestra Política de Privacidad. Si no estás de acuerdo, por favor, no uses nuestros servicios.",
     
     terms2title:      "Publicar contenido",
     terms2text:       "Al subir contenido, nos das permiso a nosotros y a otros usuarios para verlo, compartirlo y usarlo de manera personal y respetuosa.",
    
-    terms3title:      "Eliminar contenido",
-    terms3text:       `Podés pedir que eliminemos un registro. Envianos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! indicando el # registro que querés eliminar.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
-    
     terms4title:      "Normas sobre el contenido",
     terms4text:       "- No publiques contenido que comprometa la privacidad de nadie.", // No se poner viñetas
     terms5text:       "- No se permiten publicaciones que promuevan odio, violencia o discriminación.", // No se poner viñetas
@@ -121,7 +110,6 @@ const i18n = {
     terms8text:       "La plataforma es solo para uso personal y no comercial.",
 
     // Privacy
-   // privacyTitle:     "Política de Privacidad",
     privacySub:       "Última actualización: febrero 2026",
     
     priv1text:        "Gracias por ser parte y por compartir tu experiencia. Sabemos que detrás de cada aporte hay una historia, y queremos cuidar ese gesto.",
@@ -148,25 +136,16 @@ const i18n = {
     priv8text:        "Si en algún momento actualizamos este texto, la versión publicada será la vigente.",
 
     // Contact
-    //contactTitle:     "Contacto",
-    contactSub:       `¿Tenés preguntas, sugerencias o querés colaborar con el proyecto? Escribinos a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! y te responderemos lo antes posible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
-    //contactGeneral:   "Consultas generales",
-    //contactMod:       "Moderación y reportes",
-    //contactPress:     "Prensa y medios",
-    //contactPrivacy:   "Privacidad y datos",
-    //contactDelete:    "Eliminar mi mate",
-    //contactDeleteNote: "Envianos el ID de tu mate y lo eliminamos en 48 hs.",
-    //contactSocial:    "También podés encontrarnos en redes sociales. Compartí tu mate con el hashtag #200Mates",
+    contactSub:       `¿Tenés preguntas, sugerencias o querés colaborar con el proyecto? Escribinos a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> y te responderemos lo antes posible.`, 
     
     //modal
     successTitle:  "¡Mate enviado!",
     successBody1:  "Tu mate está en revisión. Una vez aprobado, aparecerá en el mapa.",
-    //successBody2:  "Gracias por sumarte a la vuelta al mundo. ¡Salud!",
-    //successBtn:    "Perfecto, ¡salud!",
+    successBody2:  "Gracias!",
+    successBtn:    "Inicio",
   },
 
   //EN ===============================================================================================================================
-
   en: {
       // Header & counters
     title:            "Around the World in about 200 Mates",
@@ -186,13 +165,10 @@ const i18n = {
     gpsNoGps:        "⚠️ GPS not available — please enter your country manually.",
     gpsNoPermission: "⚠️ Location access not enabled — please enter your country manually.",
     gpsManual:       " — type your country",
-    gpsSelected:        "País seleccionado: ", //Que hace esto? Nunca lo vi aparecer, si no aparece nunca eliminar
-   // labelCountry:     "País*",
-   // labelYerba:       "Yerba *",
+    gpsSelected:        "País seleccionado: ", 
    labelPrep:           "Favorite style*",
    labelMateType:       "Mate Type",
    labelPhoto:          "Photo *",
-   // optional:         "opcional",
     placeholderName:    "Name*",
     placeholderCountry: "Country*",
     placeholderYerba:   "Yerba Brand*",
@@ -200,11 +176,10 @@ const i18n = {
     bitter:           "Bitter",
     sweet:            "Sweet",
     terere:           "Tereré",
-    brewedMateTea:    "Brewed Mate Tea", //Ver de agregarlo
+    brewedMateTea:    "Brewed Mate Tea", 
     fileDropText:     "Drag or click to upload",
     fileDropSub:      "JPG, PNG — máx 5MB",
     submitBtn:        "Submit",
-   // submitBtnLoading: "Enviando…",
 
     // Alerts
     alertRequired: "Please complete the required fields and add a photo.",
@@ -212,7 +187,6 @@ const i18n = {
     alertError:    "Oops! Something went wrong: ",
 
     // Gallery & lightbox
-    // noMates:          "¡Sé el primero en cebar un mate! 🧉",
     errorLoading: "Error loading mates.",
     anonymous:    "Anonymous",
     mateId:       "#: ",
@@ -253,28 +227,22 @@ const i18n = {
     pressText1:       "Are you a journalist or content creator and want to write about this project? We'd love for you to do it!",
 
     // FAQs
-    //faqTitle:         "Preguntas Frecuentes",
     faq1q:            "Why can't I see my post on the map?",
     faq1a:            "Don't worry! In most cases, it's simply because we haven't had time to review it yet. All posts are reviewed by a small group of volunteers before appearing on the map, to make sure they are respectful and safe. As soon as we review it, your post will be visible!",
    
     faq2q:            "Can I delete my post?",
-    faq2a:            `Of course! If you'd like us to delete your post, please send an email to <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! with your post's tag and the subject "Delete my post". We'll remove it as soon as possible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    faq2a:            `Of course! If you'd like us to delete your post, please send an email to <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> with your post's # and the subject "Delete my post". We'll remove it as soon as possible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     faq3q:            "What data does the site collect?",
     faq3a:            "We only use the information you provide in the form, the location you chose to show on the map, and the date and time of submission. We don't collect any other personal data.",
     
     // Terms
-    //termsTitle:       "Términos de Uso",
-    //termsSub:         "Última actualización: febrero 2026",
     terms1title:      "Terms of Use",
     terms1text:       "By using our services, you agree to our Terms of Use and Privacy Policy. If you do not agree, please do not use our services.",
     
     terms2title:      "Posting content",
     terms2text:       "When you upload content, you give us and other users permission to view, share, and use it in a personal and respectful way.",
    
-    terms3title:      "Deleting content",
-    terms3text:       `You can always request to remove a post. Send us an email at <a href="mailto:paintingcreatures+200mates@gmail.com" indicating # post you want deleted.>200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
-    
     terms4title:      "Content guidelines",
     terms4text:       "- Do not post anything that compromises anyone's privacy.", // No se poner viñetas
     terms5text:       "- Do not post content that promotes hate, violence, or discrimination.", // No se poner viñetas
@@ -285,7 +253,6 @@ const i18n = {
     terms8text:       "The platform is for personal, non-commercial use only.",
 
     // Privacy
-   // privacyTitle:     "Política de Privacidad",
     privacySub:       "Last updated: February 26, 2026",
     
     priv1text:        "Thank you for being part of this and for sharing your experience. We know that behind every contribution there is a story, and we want to care for that gesture.",
@@ -312,26 +279,17 @@ const i18n = {
     priv8text:        "If we update this text, the version published on the site will be the current one.",
 
     // Contact
-    //contactTitle:     "Contacto",
-    contactSub:       `Do you have questions, suggestions, or want to collaborate with the project? Write to us at <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! and we'll get back to you as soon as possible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
-    //contactGeneral:   "Consultas generales",
-    //contactMod:       "Moderación y reportes",
-    //contactPress:     "Prensa y medios",
-    //contactPrivacy:   "Privacidad y datos",
-    //contactDelete:    "Eliminar mi mate",
-    //contactDeleteNote: "Envianos el ID de tu mate y lo eliminamos en 48 hs.",
-    //contactSocial:    "También podés encontrarnos en redes sociales. Compartí tu mate con el hashtag #200Mates",
+    contactSub:       `Do you have questions, suggestions, or want to collaborate with the project? Write to us at <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> and we'll get back to you as soon as possible.`,
     
     //modal
     successTitle: "Your mate is on its way!",
     successBody1: "It’s now under review and will appear on the map once approved.",
-    //successBody2:  "Gracias por sumarte a la vuelta al mundo. ¡Salud!",
-    //successBtn:    "Perfecto, ¡salud!",  
+    successBody2:  "Thanks",
+    successBtn:    "Home",
   
   },
 
   //PT ===============================================================================================================================
-
   pt: {
      // Header & counters
     title:            "Volta ao Mundo em cerca de 200 Mates",
@@ -351,13 +309,10 @@ const i18n = {
     gpsNoGps:        "⚠️ GPS não disponível — por favor, informe seu país manualmente.",
     gpsNoPermission: "⚠️ Sem acesso à localização — por favor, informe seu país manualmente.",
     gpsManual:       " — digite seu país",
-    gpsSelected:     "País selecionado: ", //Que hace esto? Nunca lo vi aparecer, si no aparece nunca eliminar
-   // labelCountry:     "País*",
-   // labelYerba:       "Yerba *",
+    gpsSelected:     "País selecionado: ", 
    labelPrep:           "Estilo favorito*",
    labelMateType:       "Tipo de mate",
    labelPhoto:          "Foto *",
-   // optional:         "opcional",
     placeholderName:    "Nome*",
     placeholderCountry: "País*",
     placeholderYerba:   "Marca de Erva-Mate*",
@@ -365,11 +320,10 @@ const i18n = {
     bitter:              "Amargo",
     sweet:               "Doce",
     terere:              "Tererê",
-    brewedMateTea:        "Chá Mate", //Ver de agregarlo
+    brewedMateTea:        "Chá Mate",
     fileDropText:        "Arraste ou clique para enviar",
     fileDropSub:         "JPG, PNG — máx. 5MB",
     submitBtn:           "Enviar",
-   // submitBtnLoading: "Enviando…",
 
     // Alerts
     alertRequired: "Por favor, complete os campos obrigatórios e envie uma foto.",
@@ -377,9 +331,8 @@ const i18n = {
     alertError:    "Ops! Algo deu errado ao enviar: ",
 
     // Gallery & lightbox
-    // noMates:          "¡Sé el primero en cebar un mate! 🧉",
     errorLoading:     "Erro ao carregar mates.",
-    anonymous:        "Anônimo", //Que hace esto? Nunca lo vi aparecer, si no aparece nunca eliminar
+    anonymous:        "Anônimo", 
     mateId:       "#: ",
     copyId:       "copiar",
     copied:       "copiado",
@@ -418,28 +371,22 @@ const i18n = {
     pressText1:       "Você é jornalista ou criador de conteúdo e quer escrever sobre este projeto? Adoraríamos!",
 
     // FAQs
-    //faqTitle:         "Preguntas Frecuentes",
     faq1q:            "Por que não vejo meu registro no mapa?",
     faq1a:            "Fique tranquilo/a, na maioria dos casos é porque ainda não tivemos tempo de revisá-lo. Todos os registros passam por um pequeno grupo de voluntários antes de aparecer no mapa, para garantir que sejam respeitosos e seguros. Assim que for revisado, seu registro aparecerá no mapa!",
    
     faq2q:            "Posso excluir meu registro?",
-    faq2a:            `Claro que sim! Se você quiser que removamos seu registro, envie um e-mail para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!com o # do seu registro e o assunto "Excluir meu registro". Nós o retiraremos o mais rápido possível.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    faq2a:            `Claro que sim! Se você quiser que removamos seu registro, envie um e-mail para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> com o # do seu registro e o assunto "Excluir meu registro". Nós o retiraremos o mais rápido possível.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     faq3q:            "Quais dados o site coleta?",
     faq3a:            "Usamos apenas as informações que você compartilha no formulário, a localização que escolheu mostrar no mapa, e a data e hora do envio. Não coletamos nenhum outro dado pessoal.",
 
     // Terms
-    //termsTitle:       "Términos de Uso",
-    //termsSub:         "Última actualización: febrero 2026",
     terms1title:      "Termos de Uso",
     terms1text:       "Ao usar nossos serviços, você concorda com nossos Termos de Uso e Política de Privacidade. Se não concordar, por favor, não utilize nossos serviços.",
     
     terms2title:      "Publicar conteúdo",
     terms2text:       "Ao enviar conteúdo, você nos dá permissão e aos outros usuários para visualizá-lo, compartilhá-lo e usá-lo de forma pessoal e respeitosa.",
    
-    terms3title:      "Excluir conteúdo",
-    terms3text:       `Você pode solicitar a exclusão de um registro. Envie um e-mail para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! informando qual é o # que deseja remover.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
-    
     terms4title:      "Regras de conteúdo",
     terms4text:       "- Não publique nada que comprometa a privacidade de alguém.", // No se poner viñetas
     terms5text:       "- Não publique conteúdo que promova ódio, violência ou discriminação.", // No se poner viñetas
@@ -450,7 +397,6 @@ const i18n = {
     terms8text:       "A plataforma é para uso pessoal e não comercial.",
 
     // Privacy
-   // privacyTitle:     "Política de Privacidad",
     privacySub:       "Última atualização: 26 de fevereiro de 2026",
     
     priv1text:        "Obrigado por fazer parte e por compartilhar sua experiência. Sabemos que por trás de cada contribuição existe uma história, e queremos cuidar desse gesto.",
@@ -477,24 +423,16 @@ const i18n = {
     priv8text:        "Se atualizarmos este texto, a versão publicada no site será a vigente.",
 
     // Contact
-    //contactTitle:     "Contacto",
-    contactSub:       `Você tem perguntas, sugestões ou quer colaborar com o projeto? Escreva para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! e responderemos o mais rápido possível.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
-    //contactGeneral:   "Consultas generales",
-    //contactMod:       "Moderación y reportes",
-    //contactPress:     "Prensa y medios",
-    //contactPrivacy:   "Privacidad y datos",
-    //contactDelete:    "Eliminar mi mate",
-    //contactDeleteNote: "Envianos el ID de tu mate y lo eliminamos en 48 hs.",
-    //contactSocial:    "También podés encontrarnos en redes sociales. Compartí tu mate con el hashtag #200Mates",
-    
+    contactSub:       `Você tem perguntas, sugestões ou quer colaborar com o projeto? Escreva para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> e responderemos o mais rápido possível.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+   
     //modal
     successTitle: "Seu mate foi enviado!",
     successBody1: "Ele está em revisão e aparecerá no mapa assim que for aprovado.",
-    //successBody2:  "Gracias por sumarte a la vuelta al mundo. ¡Salud!",
-    //successBtn:    "Perfecto, ¡salud!",
+    successBody2:  "Obrigado!",
+    successBtn:  "Início",
   },
 
   };
 
-// Export para uso global
+// Export 
 window.i18n = i18n;

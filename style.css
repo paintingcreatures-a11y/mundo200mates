@@ -56,7 +56,7 @@ body::before {
 }
 .header-inner {
   width: 100%;
-  height: 100px;
+  height: 80px;
   display: flex; align-items: center; gap: 16px;
 }
 .header-title { display: flex; align-items: center; gap: 10px; flex: 1; }
@@ -203,7 +203,7 @@ h1 {
 }
 .drop-sub { font-size: 10px; color: var(--text-faint); margin-bottom: 13px; }
 .drop-content p {
-  font-size: 11px; color: var(--text-muted); line-height: 1.7; margin-bottom: 9px;
+  font-size: 11px; color: var(--text-muted); line-height: 1.7; margin-bottom: 9px; text-align: justify;
 }
 
 .btn-drop-cta {
@@ -320,7 +320,7 @@ h1 {
 
 .panel-title {
   font-family: var(--font);
-  font-size: 20px; font-weight: 700; color: var(--text);
+  font-size: 16px; font-weight: 700; color: var(--text);
   display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
 }
 

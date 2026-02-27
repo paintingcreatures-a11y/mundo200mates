@@ -2,10 +2,6 @@
    200 Mates — app.js
    ============================================================ */
 
-   /* ============================================================
-   200 Mates — app.js
-   ============================================================ */
-
 const SUPABASE_URL  = "https://qpwwexlxiksmaaehqsev.supabase.co";
 const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwd3dleGx4aWtzbWFhZWhxc2V2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5ODk5MjEsImV4cCI6MjA4NzU2NTkyMX0.zfrepatjz41WDVIbxp61FblT8lKPyNpU-HB0RElIpgc";
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
@@ -284,15 +280,37 @@ const globe = Globe()(globeEl)
   .pointOfView({ lat: 20, lng: -20, altitude: 2.5 });
 
 globe.controls().autoRotate      = true;
-globe.controls().autoRotateSpeed = 0.6;
+globe.controls().autoRotateSpeed = 0.4;
+globe.controls().minPolarAngle   = Math.PI * 0.2;
+globe.controls().maxPolarAngle   = Math.PI * 0.8;
+globe.controls().enablePan       = false;
+
+let rotateTimer;
+let isZoomed = false;
+const DEFAULT_ALTITUDE = 2.5;
+const ZOOM_THRESHOLD   = 1.8;
+
+globe.controls().addEventListener("change", () => {
+  const alt = globe.pointOfView().altitude;
+  if (alt < ZOOM_THRESHOLD && !isZoomed) {
+    isZoomed = true;
+    globe.controls().autoRotate = false;
+  } else if (alt >= ZOOM_THRESHOLD && isZoomed) {
+    isZoomed = false;
+    clearTimeout(rotateTimer);
+    rotateTimer = setTimeout(() => { globe.controls().autoRotate = true; }, 800);
+  }
+});
 
 globeEl.addEventListener("mousedown",  () => { globe.controls().autoRotate = false; });
 globeEl.addEventListener("touchstart", () => { globe.controls().autoRotate = false; });
-let rotateTimer;
 ["mouseup", "touchend"].forEach(ev => globeEl.addEventListener(ev, () => {
-  clearTimeout(rotateTimer);
-  rotateTimer = setTimeout(() => { globe.controls().autoRotate = true; }, 3000);
+  if (!isZoomed) {
+    clearTimeout(rotateTimer);
+    rotateTimer = setTimeout(() => { globe.controls().autoRotate = true; }, 2000);
+  }
 }));
+
 window.addEventListener("resize", () => {
   const { w, h } = getGlobeDimensions();
   globeEl.style.width = w + "px"; globeEl.style.height = h + "px";
@@ -312,8 +330,8 @@ function initGPS() {
   countryIn.readOnly   = true;
 
   navigator.geolocation.getCurrentPosition(pos => {
-    latIn.value = pos.coords.latitude.toFixed(4);
-    lngIn.value = pos.coords.longitude.toFixed(4);
+    latIn.value = pos.coords.latitude.toFixed(2);
+    lngIn.value = pos.coords.longitude.toFixed(2);
     statusEl.textContent = `📍 ${latIn.value}, ${lngIn.value}`;
     fetch(
       `https://nominatim.openstreetmap.org/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&format=json`,
@@ -387,8 +405,12 @@ async function loadMates() {
     renderArcs(matesWithCoords);
     renderGallery();
     updateStats();
-
+/*==================================================================================================
     if (matesWithCoords.length > 0)
+      globe.pointOfView({ lat: matesWithCoords[0].lat, lng: matesWithCoords[0].lng, altitude: 2 }, 1000);
+===================================================================================================*/
+
+    if (matesWithCoords.length > 0 && !globe.controls().autoRotate)
       globe.pointOfView({ lat: matesWithCoords[0].lat, lng: matesWithCoords[0].lng, altitude: 2 }, 1000);
 
   } catch (err) {
@@ -412,7 +434,8 @@ function selectCountry(f) {
   if (cap) {
     if (!document.getElementById("lat").value) document.getElementById("lat").value = cap.lat;
     if (!document.getElementById("lng").value) document.getElementById("lng").value = cap.lng;
-    globe.pointOfView({ lat: cap.lat, lng: cap.lng, altitude: 2 }, 800);
+   globe.controls().autoRotate = false;
+   globe.pointOfView({ lat: cap.lat, lng: cap.lng, altitude: 2 }, 800);
   }
   const s = document.getElementById("gpsStatus");
   s.textContent      = `${t("gpsSelected")}${pretty}`;
@@ -501,7 +524,7 @@ function renderMarkers(mates) {
         <div style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#e8e4da;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(d.name || t("anonymous"))}</div>
         ${d.country ? `<div style="font-size:10px;color:#9a9888;margin-top:2px">🌍 ${esc(d.country)}</div>` : ""}
         ${d.brand   ? `<div style="font-size:10px;color:#8aad5e;margin-top:2px">🌿 ${esc(d.brand)}</div>`   : ""}
-        <div style="font-size:9px;color:#5a5a4e;margin-top:3px">${esc(displayId(d))}</div>
+        <div style="font-size:9px;color:#5a5a4e;margin-top:3px"># ${esc(displayId(d))}</div>
       `;
       card.appendChild(info);
 
@@ -697,7 +720,9 @@ document.getElementById("mateForm").addEventListener("submit", async e => {
       approved: null
     }]);
     if (ie) throw ie;
-    if (!isNaN(lat) && !isNaN(lng)) globe.pointOfView({ lat, lng, altitude: 2 }, 1000);
+    setTimeout(() => {
+    globe.controls().autoRotate = true;
+  }, 2000);
 
     showSuccessModal();
 
