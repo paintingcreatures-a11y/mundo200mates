@@ -166,123 +166,165 @@ const i18n = {
   },
 
   en: {
-    title:            "Around the World in about 200 Mates",
-    mates:            "mates",
-    countries:        "countries",
-    spinHint:         "← spin the globe →",
-    recentMates:      "Latest Mates",
-    statMates:        "mates",
-    statCountries:    "countries",
-    recentTag:        "RECENT",
-    formDesc:         "Fill in the details, pick your country on the globe, and upload a photo.",
-    gpsRequesting:    "Requesting location…",
-    gpsDetecting:     "Detecting location…",
-    gpsNoGps:         "GPS not available — enter your country manually.",
-    gpsNoPermission:  "No GPS — enter your country manually.",
-    gpsManual:        " — type your country",
-    gpsSelected:      "Country selected: ",
-    labelName:        "Name *",
-    labelCountry:     "Country *",
-    labelYerba:       "Yerba Brand *",
-    labelPrep:        "Sweet or bitter? *",
-    labelMateType:    "Mate type",
-    labelPhoto:       "Mate photo *",
-    optional:         "optional",
-    placeholderName:  "What's your name?",
-    placeholderCountry: "Your country",
-    placeholderYerba: "Yerba brand",
-    placeholderMateType: "Gourd, thermos, glass…",
-    bitter:           "Bitter",
-    sweet:            "Sweet",
+      // Header & counters
+    title:            "Vuelta al Mundo en unos 200 Mates",
+    mates:            "Mates",
+    countries:        "Países",
+    spinHint:         "← Girá el globo →",
+
+    // Gallery
+    statMates:        "Mates",
+    statCountries:    "Paises",
+    recentMates:      "Últimos Mates",  
+
+    // Form
+    //                "Cebate uno",  //FALTA LA PARTE DE CEBATE UNO, NO ENCUENTRO LA ETIQUETA EN EL HTML
+    gpsRequesting:    "📍 Solicitando ubicación…",
+    gpsDetecting:     "📍 Detectando ubicación…",
+    gpsNoGps:         "⚠️ GPS no disponible — ingresá tu país manualmente.",
+    gpsNoPermission:  "⚠️ Sin GPS — ingresá tu país manualmente.",
+    gpsManual:        " — escribí tu país",
+    gpsSelected:        "País seleccionado: ", //Que hace esto? Nunca lo vi aparecer, si no aparece nunca eliminar
+   // labelCountry:     "País*",
+   // labelYerba:       "Yerba *",
+   labelPrep:           "Estilo favorito*",
+   labelMateType:       "Tipo de mate",
+   labelPhoto:          "Foto *",
+   // optional:         "opcional",
+    placeholderName:    "Nombre*",
+    placeholderCountry: "País",
+    placeholderYerba:   "Marca de yerba",
+    placeholderMateType:"Madera, Acero, Vidrio,...",
+    bitter:           "Amargo",
+    sweet:            "Dulce",
     terere:           "Tereré",
-    fileDropText:     "Drag or click to upload",
-    fileDropSub:      "JPG, PNG — max 5MB",
-    submitBtn:        "Submit mate 🧉",
-    submitBtnLoading: "Submitting…",
-    alertRequired:    "Please fill in all required fields and attach a photo.",
-    alertSuccess:     "Mate submitted! It will appear on the map once approved. 🧉",
-    alertError:       "Error submitting: ",
-    noMates:          "Be the first to share a mate! 🧉",
-    errorLoading:     "Error loading mates.",
-    anonymous:        "Anonymous",
-    mateId:           "Mate ID: ",
-    copyId:           "copy",
-    copied:           "✓ copied",
-    deleteNote:       "To request deletion of your mate, share this ID with us.",
-    menuAbout:        "About",
-    menuSupport:      "Support Us",
-    menuModeration:   "Moderation",
-    menuPress:        "Press",
+    fileDropText:     "Arrastrá o hacé clic para subir",
+    fileDropSub:      "JPG, PNG — máx 5MB",
+    submitBtn:        "Enviar",
+   // submitBtnLoading: "Enviando…",
+
+    // Alerts
+    alertRequired:    "Por favor completá los campos obligatorios y adjuntá una foto.",
+    alertSuccess:     "¡Mate enviado! Aparecerá en el mapa una vez aprobado.",
+    alertError:       "Error al enviar: ",
+
+    // Gallery & lightbox
+    // noMates:          "¡Sé el primero en cebar un mate! 🧉",
+    errorLoading:     "Error cargando mates.",
+    anonymous:        "Anónimo", //Que hace esto? Nunca lo vi aparecer, si no aparece nunca eliminar
+    mateId:           "#: ",
+    copyId:           "copiar", 
+    copied:           "copiado",
+    deleteNote:       "Para solicitar la eliminación de tu mate, compartí este # con nosotros.",
+
+    // Menu nav
+    menuAbout:        "El proyecto",
+    menuSupport:      "Colaborá",
+    menuModeration:   "Convivencia",
+    menuPress:        "Noticias y Medios",
     menuFaqs:         "FAQs",
-    menuTerms:        "Terms of Use",
-    menuPrivacy:      "Privacy Policy",
-    menuContact:      "Contact",
-    aboutText1:       "200 Mates is a community-driven cultural mapping platform that digitally archives the global mate-drinking experience in relation to physical space.",
-    aboutText2:       "The project provides an interface to collaboratively record the cartography of mate culture — from squares and offices to the middle of the ocean — in order to preserve our collective histories and realities.",
-    aboutText3:       "By mapping mate culture in its multiple dimensions, the project generates affinities across difference and beyond borders, revealing the ways in which we are intimately connected.",
-    supportText1:     "200 Mates is an independent project maintained by volunteers. Your support helps us keep the server, domain, and new feature development running.",
-    supportText2:     "If you'd like to contribute, you can contact us or share the app with your mate-loving friends around the world.",
-    supportCta:       "Contact / Donate",
-    modText1:         "All submitted mates are reviewed before appearing on the map. Our moderation team verifies that content is appropriate and related to mate culture.",
-    modText2:         "If you find inappropriate content or want to report a mate, contact us directly with the mate's ID.",
-    modText3:         "Mates are reviewed within 24-48 hours of submission.",
-    pressText1:       "Are you a journalist or media outlet interested in covering 200 Mates? We'd love to talk.",
-    pressText2:       "For press inquiries, interviews, or graphic materials, get in touch.",
-    pressCta:         "press@200mates.com",
-    faqTitle:         "Frequently Asked Questions",
-    faq1q:            "How does my mate appear on the map?",
-    faq1a:            "Once you submit your photo and details, our team reviews them. If the content is appropriate, your mate appears on the globe within 24-48 hours.",
-    faq2q:            "What if I don't have GPS?",
-    faq2a:            "No problem. You can type your country manually or click directly on the globe to select it. We'll use the country's capital as the location.",
-    faq3q:            "Can I delete my mate?",
-    faq3a:            "Yes. Every mate has a unique ID visible in the gallery and lightbox. Send that ID to contact@200mates.com and we'll remove it.",
-    faq4q:            "What kinds of photos are accepted?",
-    faq4a:            "Any photo featuring a mate or the moment of drinking one. Inappropriate, offensive, or unrelated photos will be rejected.",
-    faq5q:            "Do I need to register?",
-    faq5a:            "No. 200 Mates requires no registration or account. Just fill out the form, upload your photo, and you're done.",
-    faq6q:            "Which countries are supported?",
-    faq6a:            "200 Mates is global. Anyone, anywhere in the world can share their mate.",
-    termsTitle:       "Terms of Use",
-    termsSub:         "Last updated: February 2026",
-    terms1title:      "1. Acceptance",
-    terms1text:       "By using 200 Mates you agree to these terms. If you disagree, please do not use the service.",
-    terms2title:      "2. User Content",
-    terms2text:       "By uploading a photo or data, you guarantee you hold the necessary rights to that content. Do not upload images of others without their consent.",
-    terms3title:      "3. Moderation",
-    terms3text:       "We reserve the right to reject or remove any content we deem inappropriate, offensive, or unrelated to mate culture.",
-    terms4title:      "4. Intellectual Property",
-    terms4text:       "By submitting content, you grant us a non-exclusive license to display it on the platform. You retain ownership of your photos.",
-    terms5title:      "5. Limitation of Liability",
-    terms5text:       "200 Mates is provided 'as is'. We are not liable for direct or indirect damages arising from use of the service.",
-    terms6title:      "6. Changes",
-    terms6text:       "We may modify these terms at any time. Continued use of the service implies acceptance of the updated terms.",
-    privacyTitle:     "Privacy Policy",
-    privacySub:       "Last updated: February 2026",
-    priv1title:       "What data do we collect?",
-    priv1text:        "We collect the name (can be a nickname), country, yerba brand, mate type, photo, and optional GPS coordinates you provide when completing the form.",
-    priv2title:       "How do we use your data?",
-    priv2text:        "Data is used exclusively to display your mate on the interactive globe and gallery. We do not use your data for advertising or sell it to third parties.",
-    priv3title:       "Where is it stored?",
-    priv3text:        "Data is stored on Supabase (cloud infrastructure). Photos are saved in a public bucket, accessible to any site visitor.",
-    priv4title:       "How can you delete your data?",
-    priv4text:        "You can request deletion of your mate at any time by sending the mate ID to contact@200mates.com. Requests are processed within 48 hours.",
-    priv5title:       "Cookies",
-    priv5text:        "We do not use tracking cookies or third-party analytics. The site may use local browser storage exclusively for your language preference.",
-    priv6title:       "Contact",
-    priv6text:        "For privacy inquiries, write to: privacy@200mates.com",
-    contactTitle:     "Contact",
-    contactSub:       "We're here to help.",
-    contactGeneral:   "General inquiries",
-    contactMod:       "Moderation & reports",
-    contactPress:     "Press & media",
-    contactPrivacy:   "Privacy & data",
-    contactDelete:    "Delete my mate",
-    contactDeleteNote: "Send us your mate ID and we'll remove it within 48h.",
-    contactSocial:    "You can also find us on social media. Share your mate with the hashtag #200Mates",
-    successTitle:  "Mate submitted! 🧉",
-    successBody1:  "Your mate is under review. Once approved, it will appear on the map for the whole world to see.",
-    successBody2:  "Thanks for joining the journey around the world. Cheers!",
-    successBtn:    "Perfect, cheers!",
+    menuTerms:        "Reglas y Consejos",
+    menuPrivacy:      "Privacidad",
+    menuContact:      "Contacto",
+
+    // About
+    aboutText1:       "Somos un proyecto colaborativo que nace del deseo de visibilizar una tradición profundamente arraigada en el sur de América del Sur: el mate.",
+    aboutText2:       "Más que una bebida, el mate es hospitalidad, encuentro y pertenencia.",
+    aboutText3:       "Este proyecto busca mapear el mate en el mundo para entender cómo viaja y cómo se transforma. Queremos saber cuándo se toma y en qué contextos: solo o acompañado; por la mañana, por la tarde o por la noche; trabajando o descansando; en casa o al aire libre; con pan, galletas, bizcochos, queso o fruta; dulce o amargo; caliente o frío; con o sin yuyos.",
+    aboutText4:       "En tiempos en los que lo extranjero suele mirarse con desconfianza, creemos que compartir prácticas cotidianas es una manera de generar cercanía. Conocer cómo vive el otro, qué rituales sostiene y qué tradiciones lo acompañan nos permite entendernos más allá de las fronteras.",
+
+    // Support
+    supportText1:     "Por ahora, todos los recursos que usamos son gratuitos, pero en el futuro podría ser necesario migrar a plataformas de pago. Cuando eso ocurra, habrá una opción de donación para ayudar a mantener el sitio activo.",
+    supportText2:     "Mientras tanto, la forma más valiosa en que nos podés ayudar es mejorando las traducciones. Si tenés sugerencias, ¡enviánoslas a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+  
+
+    // Moderation
+    modText1:         "Antes de aparecer en el mapa, todos los registros son revisados por un pequeño grupo de voluntarios. Esto nos ayuda a que el contenido sea seguro, respetuoso y que todos podamos disfrutar del proyecto.",
+    modText2:         "No publicaremos registros que:",
+    modText3:         "Comprometan tu anonimato o el de otros: no se aprobarán publicaciones que incluyan apellidos, números de teléfono, correos electrónicos, perfiles de redes sociales, fotos donde se vean claramente los rostros o direcciones exactas.",
+    modText4:         "Inciten al odio: no permitimos publicaciones que degraden, amenacen o discriminen a alguien por su raza, etnia, nacionalidad, capacidades, orientación sexual, sexo, identidad de género o clase social.",
+    modText5:         "Sean spam o publicidad: no se publicará contenido publicitario ni mensajes repetitivos.",
+    modText6:         "No estén relacionadas con el mate: solo publicamos fotos y registros sobre esta tradición.",
+    modText7:         "La revisión puede tomar un poquito de tiempo. ¡Gracias por tu paciencia y por formar parte de esta comunidad!",
+
+    // Press
+    pressText1:       "¿Sos periodista o creador de contenido y querés escribir sobre este proyecto? ¡Nos encantaría que lo hagas!",
+
+    // FAQs
+    //faqTitle:         "Preguntas Frecuentes",
+    faq1q:            "¿Por qué no veo mi registro en el mapa?",
+    faq1a:            "No te preocupes, en la mayoría de los casos es porque todavía no hemos tenido tiempo de revisarlo. Todos los registros son revisados por un pequeño grupo de voluntarios antes de aparecer en el mapa, para asegurarnos de que sean respetuosos y seguros. Tan pronto como lo revisemos, aparecerá en el mapa.",
+   
+    faq2q:            "¿Puedo eliminar mi registro?",
+    faq2a:            "Sí, claro. Si querés que eliminemos tu registro, envíanos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! con el # de tu registro y el asunto "Eliminar mi registro". Lo borraremos lo antes posible.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    
+    faq3q:            "¿Qué datos se recopilan?",
+    faq3a:            "Solo usamos la información que compartís en el formulario, la ubicación que decidiste mostrar en el mapa y la fecha y hora de envío. No recolectamos ningún otro dato personal.",
+
+    // Terms
+    //termsTitle:       "Términos de Uso",
+    //termsSub:         "Última actualización: febrero 2026",
+    terms1title:      "Condiciones de Uso",
+    terms1text:       "Al usar nuestros servicios, aceptas nuestras Condiciones de Uso y nuestra Política de Privacidad. Si no estás de acuerdo, por favor, no uses nuestros servicios.",
+    
+    terms2title:      "Publicar contenido",
+    terms2text:       "Al subir contenido, nos das permiso a nosotros y a otros usuarios para verlo, compartirlo y usarlo de manera personal y respetuosa.",
+   
+    terms3title:      "Eliminar contenido",
+    terms3text:       "Podés pedir que eliminemos un registro. Envianos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! indicando el # registro que querés eliminar.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    
+    terms4title:      "Normas sobre el contenido",
+    terms4text:       "- No publiques contenido que comprometa la privacidad de nadie.", // No se poner viñetas
+    terms5text:       "- No se permiten publicaciones que promuevan odio, violencia o discriminación.", // No se poner viñetas
+    terms6text:       "- No se permite spam ni publicidad.",// No se poner viñetas
+    terms7text:       "- Solo publicamos contenido relacionado con la tradición del mate.",// No se poner viñetas
+    
+    terms8title:      "Uso personal",
+    terms8text:       "La plataforma es solo para uso personal y no comercial.",
+
+    // Privacy
+   // privacyTitle:     "Política de Privacidad",
+    privacySub:       "Última actualización: febrero 2026",
+    
+    priv1text:        "Gracias por ser parte y por compartir tu experiencia. Sabemos que detrás de cada aporte hay una historia, y queremos cuidar ese gesto.",
+    
+    priv2title:       "Qué se publica",
+    priv2text:        "Cuando enviás tu aporte, se muestra en el mapa la información que completás en el formulario (nombre o seudónimo, detalles y foto) junto con el punto que elegís. También guardamos la fecha del envío.",
+    
+    priv3title:       "Participación simple y anónima",
+    priv3text:        "No necesitás crear una cuenta ni compartir correo electrónico, contraseña o redes sociales. Podés participar con tu nombre o con un seudónimo.",
+    
+    priv4title:       "Cuidado de la información",
+    priv4text:        "Tomamos medidas razonables para proteger lo que se publica. Aun así, como en cualquier espacio en internet, no podemos garantizar seguridad absoluta.",
+    
+    priv5title:       "Datos técnicos",
+    priv5text:        "Podemos recopilar información técnica sobre el uso del sitio (como cantidad de visitas) para mejorar la experiencia de uso, pero esta información no se vincula con aportes individuales.",
+    
+    priv6title:       "Servicios externos",
+    priv6text:        "Para que el sitio funcione, utilizamos algunas herramientas técnicas de terceros, que cuentan con sus propias políticas de privacidad.",
+    
+    priv7title:       "Edad mínima",
+    priv7text:        "La plataforma está pensada para personas mayores de 13 años.",
+    
+    priv8title:       "Cambios",
+    priv8text:        "Si en algún momento actualizamos este texto, la versión publicada será la vigente.",
+
+    // Contact
+    //contactTitle:     "Contacto",
+    contactSub:       "¿Tenés preguntas, sugerencias o querés colaborar con el proyecto? Escribinos a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! y te responderemos lo antes posible.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    //contactGeneral:   "Consultas generales",
+    //contactMod:       "Moderación y reportes",
+    //contactPress:     "Prensa y medios",
+    //contactPrivacy:   "Privacidad y datos",
+    //contactDelete:    "Eliminar mi mate",
+    //contactDeleteNote: "Envianos el ID de tu mate y lo eliminamos en 48 hs.",
+    //contactSocial:    "También podés encontrarnos en redes sociales. Compartí tu mate con el hashtag #200Mates",
+    
+    //modal
+    successTitle:  "¡Mate enviado!",
+    successBody1:  "Tu mate está en revisión. Una vez aprobado, aparecerá en el mapa.",
+    //successBody2:  "Gracias por sumarte a la vuelta al mundo. ¡Salud!",
+    //successBtn:    "Perfecto, ¡salud!",  
   
   },
 
