@@ -16,7 +16,7 @@ const i18n = {
     recentMates:      "Últimos Mates",  
 
     // Form
-    //                "Cebate uno",  //FALTA LA PARTE DE CEBATE UNO, NO ENCUENTRO LA ETIQUETA EN EL HTML
+    formTitle:        "Cebate uno",
     gpsRequesting:    "📍 Solicitando ubicación…",
     gpsDetecting:     "📍 Detectando ubicación…",
     gpsNoGps:         "⚠️ GPS no disponible — ingresá tu país manualmente.",
@@ -32,7 +32,7 @@ const i18n = {
     placeholderName:    "Nombre*",
     placeholderCountry: "País*",
     placeholderYerba:   "Marca de yerba*",
-    placeholderMateType:"Madera, Acero, Vidrio,...",
+    placeholderMateType:"Calabaza, Madera, Acero, Vidrio,...",
     bitter:           "Amargo",
     sweet:            "Dulce",
     terere:           "Tereré",
@@ -89,7 +89,7 @@ const i18n = {
     pressText1:       "¿Sos periodista o creador de contenido y querés escribir sobre este proyecto? ¡Nos encantaría que lo hagas!",
 
     // FAQs
-    //faqTitle:         "Preguntas Frecuentes",
+    //faqTitle:       "Preguntas Frecuentes",
     faq1q:            "¿Por qué no veo mi registro en el mapa?",
     faq1a:            "No te preocupes, en la mayoría de los casos es porque todavía no hemos tenido tiempo de revisarlo. Todos los registros son revisados por un pequeño grupo de voluntarios antes de aparecer en el mapa, para asegurarnos de que sean respetuosos y seguros. Tan pronto como lo revisemos, aparecerá en el mapa.",
    
@@ -180,7 +180,7 @@ const i18n = {
     recentMates:      "Last Mates",  
 
     // Form
-    //                "Make yourself a mate",  //FALTA LA PARTE DE CEBATE UNO, NO ENCUENTRO LA ETIQUETA EN EL HTML
+    formTitle:       "Make yourself a mate and join in",
     gpsRequesting:   "📍 Requesting your location…",
     gpsDetecting:    "📍 Detecting your location…",
     gpsNoGps:        "⚠️ GPS not available — please enter your country manually.",
@@ -196,7 +196,7 @@ const i18n = {
     placeholderName:    "Name*",
     placeholderCountry: "Country*",
     placeholderYerba:   "Yerba Brand*",
-    placeholderMateType:"Wood, Stainless Steel, Glass,...",
+    placeholderMateType:"Calabash, Wood, Stainless Steel, Glass,...",
     bitter:           "Bitter",
     sweet:            "Sweet",
     terere:           "Tereré",
@@ -345,7 +345,7 @@ const i18n = {
     recentMates:      "Últimos Mates",  
 
     // Form
-    //                "Cebate uno",  //FALTA LA PARTE DE CEBATE UNO, NO ENCUENTRO LA ETIQUETA EN EL HTML
+    formTitle:       "Faz um mate",
     gpsRequesting:   "📍 Solicitando sua localização…",
     gpsDetecting:    "📍 Detectando sua localização…",
     gpsNoGps:        "⚠️ GPS não disponível — por favor, informe seu país manualmente.",
@@ -361,7 +361,7 @@ const i18n = {
     placeholderName:    "Nome*",
     placeholderCountry: "País*",
     placeholderYerba:   "Marca de Erva-Mate*",
-    placeholderMateType: "Madeira, Aço, Vidro,...",
+    placeholderMateType: "Cabaça, Madeira, Aço, Vidro,...",
     bitter:              "Amargo",
     sweet:               "Doce",
     terere:              "Tererê",

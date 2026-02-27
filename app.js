@@ -26,7 +26,7 @@ function t(key) {
 function applyI18n() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const v = t(el.dataset.i18n);
-    if (v && v !== el.dataset.i18n) el.textContent = v;
+    if (v && v !== el.dataset.i18n) el.innerHTML = v;
   });
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     const v = t(el.dataset.i18nPlaceholder);
@@ -745,9 +745,11 @@ function activateTab(tabId) {
 function positionPanel() {
   const rect  = hamburgerBtn.getBoundingClientRect();
   const panel = dropMenu.querySelector(".drop-panel");
-  panel.style.top   = (rect.bottom + 8) + "px";
-  panel.style.left  = rect.left + "px";
-  panel.style.right = "auto";
+  const topPos = rect.bottom + 8;
+  panel.style.top     = topPos + "px";
+  panel.style.left    = rect.left + "px";
+  panel.style.right   = "auto";
+  panel.style.maxHeight = (window.innerHeight - topPos - 12) + "px";
 }
 
 function openMenu(tabId) {
