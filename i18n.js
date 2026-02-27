@@ -30,8 +30,8 @@ const i18n = {
    labelPhoto:          "Foto *",
    // optional:         "opcional",
     placeholderName:    "Nombre*",
-    placeholderCountry: "País",
-    placeholderYerba:   "Marca de yerba",
+    placeholderCountry: "País*",
+    placeholderYerba:   "Marca de yerba*",
     placeholderMateType:"Madera, Acero, Vidrio,...",
     bitter:           "Amargo",
     sweet:            "Dulce",
@@ -74,7 +74,7 @@ const i18n = {
 
     // Support
     supportText1:     "Por ahora, todos los recursos que usamos son gratuitos, pero en el futuro podría ser necesario migrar a plataformas de pago. Cuando eso ocurra, habrá una opción de donación para ayudar a mantener el sitio activo.",
-    supportText2:     "Mientras tanto, la forma más valiosa en que nos podés ayudar es mejorando las traducciones. Si tenés sugerencias, ¡enviánoslas a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    supportText2:     `Mientras tanto, la forma más valiosa en que nos podés ayudar es mejorando las traducciones. Si tenés sugerencias, ¡enviánoslas a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
   
     // Moderation
     modText1:         "Antes de aparecer en el mapa, todos los registros son revisados por un pequeño grupo de voluntarios. Esto nos ayuda a que el contenido sea seguro, respetuoso y que todos podamos disfrutar del proyecto.",
@@ -94,7 +94,7 @@ const i18n = {
     faq1a:            "No te preocupes, en la mayoría de los casos es porque todavía no hemos tenido tiempo de revisarlo. Todos los registros son revisados por un pequeño grupo de voluntarios antes de aparecer en el mapa, para asegurarnos de que sean respetuosos y seguros. Tan pronto como lo revisemos, aparecerá en el mapa.",
    
     faq2q:            "¿Puedo eliminar mi registro?",
-    faq2a:            "Sí, claro. Si querés que eliminemos tu registro, envíanos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! con el # de tu registro y el asunto "Eliminar mi registro". Lo borraremos lo antes posible.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    faq2a:            `Sí, claro. Si querés que eliminemos tu registro, envíanos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! con el # de tu registro y el asunto "Eliminar mi registro". Lo borraremos lo antes posible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     faq3q:            "¿Qué datos se recopilan?",
     faq3a:            "Solo usamos la información que compartís en el formulario, la ubicación que decidiste mostrar en el mapa y la fecha y hora de envío. No recolectamos ningún otro dato personal.",
@@ -109,7 +109,7 @@ const i18n = {
     terms2text:       "Al subir contenido, nos das permiso a nosotros y a otros usuarios para verlo, compartirlo y usarlo de manera personal y respetuosa.",
    
     terms3title:      "Eliminar contenido",
-    terms3text:       "Podés pedir que eliminemos un registro. Envianos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! indicando el # registro que querés eliminar.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    terms3text:       `Podés pedir que eliminemos un registro. Envianos un correo a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! indicando el # registro que querés eliminar.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     terms4title:      "Normas sobre el contenido",
     terms4text:       "- No publiques contenido que comprometa la privacidad de nadie.", // No se poner viñetas
@@ -149,7 +149,7 @@ const i18n = {
 
     // Contact
     //contactTitle:     "Contacto",
-    contactSub:       "¿Tenés preguntas, sugerencias o querés colaborar con el proyecto? Escribinos a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! y te responderemos lo antes posible.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    contactSub:       `¿Tenés preguntas, sugerencias o querés colaborar con el proyecto? Escribinos a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! y te responderemos lo antes posible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     //contactGeneral:   "Consultas generales",
     //contactMod:       "Moderación y reportes",
     //contactPress:     "Prensa y medios",
@@ -200,7 +200,7 @@ const i18n = {
     bitter:           "Bitter",
     sweet:            "Sweet",
     terere:           "Tereré",
-    brewedMateTea:    "Brewed Mate Tea" //Ver de agregarlo
+    brewedMateTea:    "Brewed Mate Tea", //Ver de agregarlo
     fileDropText:     "Drag or click to upload",
     fileDropSub:      "JPG, PNG — máx 5MB",
     submitBtn:        "Submit",
@@ -238,7 +238,7 @@ const i18n = {
     
     // Support
     supportText1:     "For now, all the resources we use are free, but in the future it might be necessary to move to paid platforms. When that happens, there will be an option to donate to help keep the site running.",
-    supportText2:     "In the meantime, the most valuable way you can help is by improving the translations. If you have suggestions, please send them to <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    supportText2:     `In the meantime, the most valuable way you can help is by improving the translations. If you have suggestions, please send them to <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
   
     // Moderation
     modText1:         "Before appearing on the map, all submissions are reviewed by a small group of volunteers. This helps ensure that the content is safe, respectful, and that everyone can enjoy the project.",
@@ -258,10 +258,10 @@ const i18n = {
     faq1a:            "Don't worry! In most cases, it's simply because we haven't had time to review it yet. All posts are reviewed by a small group of volunteers before appearing on the map, to make sure they are respectful and safe. As soon as we review it, your post will be visible!",
    
     faq2q:            "Can I delete my post?",
-    faq2a:            "Of course! If you'd like us to delete your post, please send an email to <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! with your post's tag and the subject "Delete my post". We'll remove it as soon as possible.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    faq2a:            `Of course! If you'd like us to delete your post, please send an email to <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! with your post's tag and the subject "Delete my post". We'll remove it as soon as possible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     faq3q:            "What data does the site collect?",
-    faq3a:            "We only use the information you provide in the form, the location you chose to show on the map, and the date and time of submission. We don't collect any other personal data.";
+    faq3a:            "We only use the information you provide in the form, the location you chose to show on the map, and the date and time of submission. We don't collect any other personal data.",
     
     // Terms
     //termsTitle:       "Términos de Uso",
@@ -273,7 +273,7 @@ const i18n = {
     terms2text:       "When you upload content, you give us and other users permission to view, share, and use it in a personal and respectful way.",
    
     terms3title:      "Deleting content",
-    terms3text:       "You can always request to remove a post. Send us an email at <a href="mailto:paintingcreatures+200mates@gmail.com" indicating # post you want deleted.>200mates</a>! ", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    terms3text:       `You can always request to remove a post. Send us an email at <a href="mailto:paintingcreatures+200mates@gmail.com" indicating # post you want deleted.>200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     terms4title:      "Content guidelines",
     terms4text:       "- Do not post anything that compromises anyone's privacy.", // No se poner viñetas
@@ -313,7 +313,7 @@ const i18n = {
 
     // Contact
     //contactTitle:     "Contacto",
-    contactSub:       "Do you have questions, suggestions, or want to collaborate with the project? Write to us at <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! and we'll get back to you as soon as possible.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    contactSub:       `Do you have questions, suggestions, or want to collaborate with the project? Write to us at <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! and we'll get back to you as soon as possible.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     //contactGeneral:   "Consultas generales",
     //contactMod:       "Moderación y reportes",
     //contactPress:     "Prensa y medios",
@@ -359,13 +359,13 @@ const i18n = {
    labelPhoto:          "Foto *",
    // optional:         "opcional",
     placeholderName:    "Nome*",
-    placeholderCountry: "País",
-    placeholderYerba:   "Marca de Erva-Mate",
+    placeholderCountry: "País*",
+    placeholderYerba:   "Marca de Erva-Mate*",
     placeholderMateType: "Madeira, Aço, Vidro,...",
     bitter:              "Amargo",
     sweet:               "Doce",
     terere:              "Tererê",
-    brewedMateTea:        "Chá Mate" //Ver de agregarlo
+    brewedMateTea:        "Chá Mate", //Ver de agregarlo
     fileDropText:        "Arraste ou clique para enviar",
     fileDropSub:         "JPG, PNG — máx. 5MB",
     submitBtn:           "Enviar",
@@ -403,7 +403,7 @@ const i18n = {
 
     // Support
     supportText1:     "Por enquanto, todos os recursos que usamos são gratuitos, mas no futuro pode ser necessário migrar para plataformas pagas. Quando isso acontecer, haverá uma opção de doação para ajudar a manter o site ativo.",
-    supportText2:     "Enquanto isso, a forma mais valiosa de nos ajudar é aprimorando as traduções. Se tiver sugestões, envie para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    supportText2:     `Enquanto isso, a forma mais valiosa de nos ajudar é aprimorando as traduções. Se tiver sugestões, envie para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
   
     // Moderation
     modText1:         "Antes de aparecer no mapa, todos os registros são revisados por um pequeno grupo de voluntários. Isso nos ajuda a garantir que o conteúdo seja seguro, respeitoso e que todos possam aproveitar o projeto.",
@@ -423,7 +423,7 @@ const i18n = {
     faq1a:            "Fique tranquilo/a, na maioria dos casos é porque ainda não tivemos tempo de revisá-lo. Todos os registros passam por um pequeno grupo de voluntários antes de aparecer no mapa, para garantir que sejam respeitosos e seguros. Assim que for revisado, seu registro aparecerá no mapa!",
    
     faq2q:            "Posso excluir meu registro?",
-    faq2a:            "Claro que sim! Se você quiser que removamos seu registro, envie um e-mail para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!com o # do seu registro e o assunto "Excluir meu registro". Nós o retiraremos o mais rápido possível.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    faq2a:            `Claro que sim! Se você quiser que removamos seu registro, envie um e-mail para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!com o # do seu registro e o assunto "Excluir meu registro". Nós o retiraremos o mais rápido possível.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     faq3q:            "Quais dados o site coleta?",
     faq3a:            "Usamos apenas as informações que você compartilha no formulário, a localização que escolheu mostrar no mapa, e a data e hora do envio. Não coletamos nenhum outro dado pessoal.",
@@ -438,7 +438,7 @@ const i18n = {
     terms2text:       "Ao enviar conteúdo, você nos dá permissão e aos outros usuários para visualizá-lo, compartilhá-lo e usá-lo de forma pessoal e respeitosa.",
    
     terms3title:      "Excluir conteúdo",
-    terms3text:       "Você pode solicitar a exclusão de um registro. Envie um e-mail para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! informando qual é o # que deseja remover.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    terms3text:       `Você pode solicitar a exclusão de um registro. Envie um e-mail para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! informando qual é o # que deseja remover.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     
     terms4title:      "Regras de conteúdo",
     terms4text:       "- Não publique nada que comprometa a privacidade de alguém.", // No se poner viñetas
@@ -478,7 +478,7 @@ const i18n = {
 
     // Contact
     //contactTitle:     "Contacto",
-    contactSub:       "Você tem perguntas, sugestões ou quer colaborar com o projeto? Escreva para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! e responderemos o mais rápido possível.", //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
+    contactSub:       `Você tem perguntas, sugestões ou quer colaborar com o projeto? Escreva para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>! e responderemos o mais rápido possível.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
     //contactGeneral:   "Consultas generales",
     //contactMod:       "Moderación y reportes",
     //contactPress:     "Prensa y medios",
@@ -494,8 +494,7 @@ const i18n = {
     //successBtn:    "Perfecto, ¡salud!",
   },
 
-  }
-};
+  };
 
 // Export para uso global
 window.i18n = i18n;
