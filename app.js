@@ -2,6 +2,10 @@
    200 Mates — app.js
    ============================================================ */
 
+   /* ============================================================
+   200 Mates — app.js
+   ============================================================ */
+
 const SUPABASE_URL  = "https://qpwwexlxiksmaaehqsev.supabase.co";
 const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwd3dleGx4aWtzbWFhZWhxc2V2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5ODk5MjEsImV4cCI6MjA4NzU2NTkyMX0.zfrepatjz41WDVIbxp61FblT8lKPyNpU-HB0RElIpgc";
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
@@ -235,19 +239,17 @@ function showSuccessModal() {
   const modal = document.getElementById("successModal");
   if (!modal) return;
 
-  // Update texts from i18n
-  const titleEl   = modal.querySelector(".smodal-title");
-  const body1El   = modal.querySelector(".smodal-body1");
-  const body2El   = modal.querySelector(".smodal-body2");
-  const btnEl     = modal.querySelector(".smodal-btn");
-  if (titleEl)  titleEl.textContent  = t("successTitle");
-  if (body1El)  body1El.textContent  = t("successBody1");
-  if (body2El)  body2El.textContent  = t("successBody2");
-  if (btnEl)    btnEl.textContent    = t("successBtn");
+  const titleEl = modal.querySelector(".smodal-title");
+  const body1El = modal.querySelector(".smodal-body1");
+  const body2El = modal.querySelector(".smodal-body2");
+  const btnEl   = modal.querySelector(".smodal-btn");
+  if (titleEl) titleEl.textContent = t("successTitle");
+  if (body1El) body1El.textContent = t("successBody1");
+  if (body2El) body2El.textContent = t("successBody2");
+  if (btnEl)   btnEl.textContent   = t("successBtn");
 
   modal.classList.add("open");
 
-  // Steam particles
   const steam = modal.querySelector(".smodal-steam");
   if (steam) {
     steam.innerHTML = "";
@@ -428,19 +430,19 @@ function renderPolygons() {
     globe
       .polygonsData([])
       .polygonCapColor(d =>
-        sel && d.iso3 === sel        ? "#c8a46e" :
-        colored.includes(d.iso3)     ? "#6A8F60" :
+        sel && d.iso3 === sel    ? "#c8a46e" :
+        colored.includes(d.iso3) ? "#6A8F60" :
         "rgba(255,255,255,.04)"
       )
       .polygonSideColor(()  => "rgba(0,0,0,.2)")
       .polygonStrokeColor(() => "#2a2e24")
       .polygonAltitude(d =>
-        sel && d.iso3 === sel        ? .02 :
-        colored.includes(d.iso3)     ? .012 :
+        sel && d.iso3 === sel    ? .02 :
+        colored.includes(d.iso3) ? .012 :
         0
       )
-      .onPolygonClick(p  => { globe.controls().autoRotate = false; selectCountry(p); })
-      .onPolygonHover(h  => { globeEl.style.cursor = h ? "pointer" : "default"; })
+      .onPolygonClick(p => { globe.controls().autoRotate = false; selectCountry(p); })
+      .onPolygonHover(h => { globeEl.style.cursor = h ? "pointer" : "default"; })
       .polygonsData(countriesGeo.slice());
   }, 60);
 }
@@ -496,7 +498,7 @@ function renderMarkers(mates) {
       const info = document.createElement("div");
       info.style.cssText = "padding:8px 10px;";
       info.innerHTML = `
-        <div style="font-family:'DM Mono',monospace;font-size:12px;font-weight:600;color:#e8e4da;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(d.name || t("anonymous"))}</div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#e8e4da;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(d.name || t("anonymous"))}</div>
         ${d.country ? `<div style="font-size:10px;color:#9a9888;margin-top:2px">🌍 ${esc(d.country)}</div>` : ""}
         ${d.brand   ? `<div style="font-size:10px;color:#8aad5e;margin-top:2px">🌿 ${esc(d.brand)}</div>`   : ""}
         <div style="font-size:9px;color:#5a5a4e;margin-top:3px">${esc(displayId(d))}</div>
@@ -555,9 +557,8 @@ function openLightbox(d) {
   lbImg.src = getPhotoUrl(d.photo_path) || "placeholder.png";
   lbInfo.innerHTML = `
     <span class="lb-name">${esc(d.name || t("anonymous"))}</span>
-    ${d.country   ? `<span class="lb-country">🌍 ${esc(d.country)}</span>`                               : ""}
-    ${d.brand     ? `<span class="lb-detail">🌿 ${esc(d.brand)} · ${esc(d.preparation || "")}</span>`   : ""}
-    ${d.mate_type ? `<span class="lb-detail" style="color:var(--tierra)">🧉 ${esc(d.mate_type)}</span>` : ""}
+    ${d.country ? `<span class="lb-country">🌍 ${esc(d.country)}</span>`     : ""}
+    ${d.brand   ? `<span class="lb-detail">🌿 ${esc(d.brand)}</span>`        : ""}
     <div class="lb-id">
       <span>${esc(t("mateId"))}<strong>${esc(pid)}</strong></span>
       <button class="lb-id-copy" data-pid="${esc(pid)}">${t("copyId")}</button>
@@ -585,7 +586,7 @@ function animateCount(el, target) {
   const duration = 600;
   const startTs  = performance.now();
   const step = ts => {
-    const p = Math.min((ts - startTs) / duration, 1);
+    const p    = Math.min((ts - startTs) / duration, 1);
     const ease = 1 - Math.pow(1 - p, 3);
     el.textContent = Math.round(start + (target - start) * ease);
     if (p < 1) requestAnimationFrame(step);
@@ -594,10 +595,8 @@ function animateCount(el, target) {
 }
 
 function updateStats() {
-  const matesEl    = document.getElementById("statMates");
-  const countriesEl = document.getElementById("statCountries");
-  animateCount(matesEl,    allMates.length);
-  animateCount(countriesEl, countriesColored.length);
+  animateCount(document.getElementById("statMates"),     allMates.length);
+  animateCount(document.getElementById("statCountries"), countriesColored.length);
 }
 
 // ── Gallery ───────────────────────────────────────────────────
@@ -610,14 +609,11 @@ function renderGallery() {
   }
   el.innerHTML = recent.map((m, i) => {
     const url = getPhotoUrl(m.photo_path);
-    const pid = displayId(m);
     return `<div class="gallery-card" style="animation-delay:${i * .08}s">
       <img src="${esc(url || "placeholder.png")}" onerror="this.src='placeholder.png'" alt="mate">
       <div class="gallery-info">
         <span class="gallery-name">${esc(m.name || t("anonymous"))}</span>
-        <span class="gallery-meta">🌍 ${esc(m.country || "")}</span>
-        <span class="gallery-brand">🌿 ${esc(m.brand || "")}</span>
-        <span class="gallery-id">${t("mateId")}${esc(pid)}</span>
+        <span class="gallery-country">${esc(m.country || "")}</span>
       </div>
     </div>`;
   }).join("");
@@ -703,7 +699,6 @@ document.getElementById("mateForm").addEventListener("submit", async e => {
     if (ie) throw ie;
     if (!isNaN(lat) && !isNaN(lng)) globe.pointOfView({ lat, lng, altitude: 2 }, 1000);
 
-    // ── Mostrar modal bonito en lugar de alert ──
     showSuccessModal();
 
     e.target.reset();
@@ -748,12 +743,11 @@ function activateTab(tabId) {
   });
 }
 function positionPanel() {
-  const rect   = hamburgerBtn.getBoundingClientRect();
-  const panel  = dropMenu.querySelector(".drop-panel");
-  const gap    = 8;
-  panel.style.top   = (rect.bottom + gap) + "px";
-  panel.style.right = (window.innerWidth - rect.right) + "px";
-  panel.style.left  = "auto";
+  const rect  = hamburgerBtn.getBoundingClientRect();
+  const panel = dropMenu.querySelector(".drop-panel");
+  panel.style.top   = (rect.bottom + 8) + "px";
+  panel.style.left  = rect.left + "px";
+  panel.style.right = "auto";
 }
 
 function openMenu(tabId) {
