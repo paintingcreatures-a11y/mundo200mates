@@ -64,7 +64,7 @@
     <section class="globe-section">
       <div id="globe-container">
         <div id="globe"></div>
-        <p class="globe-hint"><span data-i18n="spinHint">← girá el globo · spin the globe →</span></p>
+        <p class="globe-hint"><span data-i18n="spinHint"></span></p>
       </div>
     </section>
 
@@ -73,8 +73,7 @@
       <!-- Gallery -->
       <div class="panel-block">
         <h2 class="panel-title">
-          <span data-i18n="recentMates">Últimos Mates</span>
-          <span class="badge-custom badge-green" data-i18n="recentTag">RECIENTES</span>
+          <span data-i18n="recentMates"></span>
         </h2>
         <div id="gallery" class="gallery-grid">
           <div class="skeleton-card"></div>
@@ -87,9 +86,9 @@
       <!-- Form -->
       <div class="panel-block">
 
-        <h2 class="form-section-title" data-i18n="formTitle">Cebate uno</h2>
+        <h2 class="form-section-title" data-i18n="formTitle"></h2>
 
-        <div id="gpsStatus" class="gps-status" data-i18n="gpsRequesting">📍 Solicitando ubicación…</div>
+        <div id="gpsStatus" class="gps-status" data-i18n="gpsRequesting"></div>
 
         <form id="mateForm" novalidate>
           <input type="hidden" id="lat">
@@ -97,52 +96,51 @@
           <input type="hidden" id="countryCode">
 
           <div class="field-group">
-            <input type="text" id="name" class="field-input" data-i18n-placeholder="placeholderName" placeholder="¿Cómo te llamás?" required>
+            <input type="text" id="name" class="field-input" data-i18n-placeholder="placeholderName" placeholder="" required>
           </div>
 
           <div class="field-group">
-            <input type="text" id="country" class="field-input" data-i18n-placeholder="placeholderCountry" placeholder="Tu país" required>
+            <input type="text" id="country" class="field-input" data-i18n-placeholder="placeholderCountry" placeholder="" required>
           </div>
 
           <div class="field-group">
-            <input type="text" id="brand" class="field-input" data-i18n-placeholder="placeholderYerba" placeholder="Marca de yerba" required>
+            <input type="text" id="brand" class="field-input" data-i18n-placeholder="placeholderYerba" placeholder="" required>
           </div>
 
           <div class="field-group">
-            <label class="field-label" data-i18n="labelPrep">ESTILO FAVORITO *</label>
+            <label class="field-label" data-i18n="labelPrep"></label>
             <div class="prep-toggle">
-              <button type="button" class="prep-btn active" data-val="amargo" id="btnAmargo" data-i18n="bitter">Amargo</button>
-              <button type="button" class="prep-btn" data-val="dulce" id="btnDulce" data-i18n="sweet">Dulce</button>
-              <button type="button" class="prep-btn" data-val="tereré" id="btnTerere" data-i18n="terere">Tereré</button>
+              <button type="button" class="prep-btn active" data-val="amargo" id="btnAmargo" data-i18n="bitter"></button>
+              <button type="button" class="prep-btn" data-val="dulce" id="btnDulce" data-i18n="sweet"></button>
+              <button type="button" class="prep-btn" data-val="tereré" id="btnTerere" data-i18n="terere"></button>
             </div>
             <input type="hidden" id="preparation" value="amargo">
           </div>
 
           <div class="field-group">
             <label class="field-label">
-              <span data-i18n="labelMateType">TIPO DE MATE</span>
+              <span data-i18n="labelMateType"></span>
             </label>
-            <input type="text" id="mate_type" class="field-input" data-i18n-placeholder="placeholderMateType" placeholder="Calabaza, Madera, Cuerno, Acero, Vidrio, C…">
+            <input type="text" id="mate_type" class="field-input" data-i18n-placeholder="placeholderMateType" placeholder="">
           </div>
 
           <div class="field-group">
-            <label class="field-label" data-i18n="labelPhoto">FOTO *</label>
+            <label class="field-label" data-i18n="labelPhoto"></label>
             <div class="file-drop" id="fileDrop">
               <input type="file" id="photo" accept="image/*" required>
               <div class="file-drop-inner" id="fileDropInner">
                 <i class="bi bi-camera file-icon-bs"></i>
-                <span class="file-text" data-i18n="fileDropText">Arrastrá o hacé clic para subir</span>
-                <span class="file-sub" data-i18n="fileDropSub">JPG, PNG — máx 5MB</span>
+                <span class="file-text" data-i18n="fileDropText"></span>
+                <span class="file-sub" data-i18n="fileDropSub"></span>
               </div>
               <img id="photoPreview" class="photo-preview" style="display:none" alt="preview">
             </div>
           </div>
 
           <button type="submit" id="submitBtn" class="btn-submit-main">
-            <span id="submitBtnText" data-i18n="submitBtn">Enviar</span>
+            <span id="submitBtnText" data-i18n="submitBtn"></span>
             <span id="submitBtnLoader" style="display:none;align-items:center;gap:6px;">
               <span class="spinner-border spinner-border-sm" role="status"></span>
-              <span data-i18n="submitBtnLoading">Enviando…</span>
             </span>
           </button>
         </form>
@@ -170,17 +168,15 @@
     <div class="smodal-card">
       <div class="smodal-top">
         <div class="smodal-mate-wrap">
-          <span class="smodal-mate-emoji">🧉</span>
           <div class="smodal-steam"></div>
         </div>
         <div class="smodal-glow"></div>
       </div>
       <div class="smodal-body">
-        <h3 class="smodal-title" data-i18n="successTitle">¡Mate enviado!</h3>
-        <p class="smodal-body1" data-i18n="successBody1">Tu mate está en revisión y pronto aparecerá en el mapa.</p>
+        <h3 class="smodal-title" data-i18n="successTitle"></h3>
+        <p class="smodal-body1" data-i18n="successBody1"></p>
         <div class="smodal-divider"></div>
-        <p class="smodal-body2" data-i18n="successBody2">Gracias por sumarte a la vuelta al mundo. 🌍</p>
-        <button class="smodal-btn" data-i18n="successBtn">Perfecto, ¡salud!</button>
+        <p class="smodal-body2" data-i18n="successBody2"></p>
       </div>
     </div>
   </div>
@@ -190,82 +186,68 @@
     <div id="dropBackdrop" class="drop-backdrop"></div>
     <div class="drop-panel">
       <div class="drop-tabs-row">
-        <button class="drop-tab active" data-tab="about"      data-i18n="menuAbout">About</button>
-        <button class="drop-tab"        data-tab="support"    data-i18n="menuSupport">Support Us</button>
-        <button class="drop-tab"        data-tab="moderation" data-i18n="menuModeration">Moderación</button>
-        <button class="drop-tab"        data-tab="press"      data-i18n="menuPress">Prensa</button>
+        <button class="drop-tab active" data-tab="about"      data-i18n="menuAbout"></button>
+        <button class="drop-tab"        data-tab="support"    data-i18n="menuSupport"></button>
+        <button class="drop-tab"        data-tab="moderation" data-i18n="menuModeration"></button>
+        <button class="drop-tab"        data-tab="press"      data-i18n="menuPress"></button>
       </div>
       <div class="drop-content">
         <div class="drop-pane active" id="tab-about">
-          <h4 class="drop-pane-title" data-i18n="menuAbout">About</h4>
-          <p data-i18n="aboutText1"></p><p data-i18n="aboutText2"></p><p data-i18n="aboutText3"></p>
+          <h4 class="drop-pane-title" data-i18n="menuAbout"></h4>
+          <p data-i18n="aboutText1"></p><p data-i18n="aboutText2"></p><p data-i18n="aboutText3"></p></p><p data-i18n="aboutText4"></p>
         </div>
         <div class="drop-pane" id="tab-support">
-          <h4 class="drop-pane-title" data-i18n="menuSupport">Support Us</h4>
+          <h4 class="drop-pane-title" data-i18n="menuSupport"></h4>
           <p data-i18n="supportText1"></p><p data-i18n="supportText2"></p>
-          <a href="mailto:hola@200mates.com" class="btn-drop-cta" data-i18n="supportCta">Contactar / Donar</a>
+          <a href="mailto:hola@200mates.com" class="btn-drop-cta" data-i18n="supportCta"></a>
         </div>
         <div class="drop-pane" id="tab-moderation">
-          <h4 class="drop-pane-title" data-i18n="menuModeration">Moderación</h4>
-          <p data-i18n="modText1"></p><p data-i18n="modText2"></p><p data-i18n="modText3"></p>
+          <h4 class="drop-pane-title" data-i18n="menuModeration"></h4>
+          <p data-i18n="modText1"></p><p data-i18n="modText2"></p><p data-i18n="modText3"></p><p data-i18n="modText4"></p><p data-i18n="modText5"></p><p data-i18n="modText6"></p><p data-i18n="modText7"></p>
         </div>
         <div class="drop-pane" id="tab-press">
-          <h4 class="drop-pane-title" data-i18n="menuPress">Prensa</h4>
-          <p data-i18n="pressText1"></p><p data-i18n="pressText2"></p>
-          <a href="mailto:press@200mates.com" class="btn-drop-cta" data-i18n="pressCta">press@200mates.com</a>
+          <h4 class="drop-pane-title" data-i18n="menuPress"></h4>
+          <p data-i18n="pressText1"></p>
         </div>
         <div class="drop-pane" id="tab-faqs">
-          <h4 class="drop-pane-title" data-i18n="faqTitle">Preguntas Frecuentes</h4>
+          <h4 class="drop-pane-title" data-i18n="faqTitle"></h4>
           <div class="faq-list">
             <details class="faq-item"><summary class="faq-q" data-i18n="faq1q"></summary><p class="faq-a" data-i18n="faq1a"></p></details>
             <details class="faq-item"><summary class="faq-q" data-i18n="faq2q"></summary><p class="faq-a" data-i18n="faq2a"></p></details>
             <details class="faq-item"><summary class="faq-q" data-i18n="faq3q"></summary><p class="faq-a" data-i18n="faq3a"></p></details>
-            <details class="faq-item"><summary class="faq-q" data-i18n="faq4q"></summary><p class="faq-a" data-i18n="faq4a"></p></details>
-            <details class="faq-item"><summary class="faq-q" data-i18n="faq5q"></summary><p class="faq-a" data-i18n="faq5a"></p></details>
-            <details class="faq-item"><summary class="faq-q" data-i18n="faq6q"></summary><p class="faq-a" data-i18n="faq6a"></p></details>
           </div>
         </div>
         <div class="drop-pane" id="tab-terms">
-          <h4 class="drop-pane-title" data-i18n="termsTitle">Términos de Uso</h4>
-          <p class="drop-sub" data-i18n="termsSub">Última actualización: febrero 2026</p>
+          <h4 class="drop-pane-title" data-i18n="termsTitle"></h4>
+          <p class="drop-sub" data-i18n="termsSub"></p>
           <div class="legal-block"><strong data-i18n="terms1title"></strong><p data-i18n="terms1text"></p></div>
           <div class="legal-block"><strong data-i18n="terms2title"></strong><p data-i18n="terms2text"></p></div>
           <div class="legal-block"><strong data-i18n="terms3title"></strong><p data-i18n="terms3text"></p></div>
-          <div class="legal-block"><strong data-i18n="terms4title"></strong><p data-i18n="terms4text"></p></div>
-          <div class="legal-block"><strong data-i18n="terms5title"></strong><p data-i18n="terms5text"></p></div>
-          <div class="legal-block"><strong data-i18n="terms6title"></strong><p data-i18n="terms6text"></p></div>
+          <div class="legal-block"><strong data-i18n="terms4title"></strong><p data-i18n="terms4text"></p></div><p data-i18n="terms5text"></p></div><p data-i18n="terms6text"></p></div><p data-i18n="terms7text"></p></div>
+          <div class="legal-block"><strong data-i18n="terms8title"></strong><p data-i18n="terms8text"></p></div>
         </div>
         <div class="drop-pane" id="tab-privacy">
-          <h4 class="drop-pane-title" data-i18n="privacyTitle">Política de Privacidad</h4>
-          <p class="drop-sub" data-i18n="privacySub">Última actualización: febrero 2026</p>
-          <div class="legal-block"><strong data-i18n="priv1title"></strong><p data-i18n="priv1text"></p></div>
+          <h4 class="drop-pane-title" data-i18n="privacyTitle"></h4>
+          <p class="drop-sub" data-i18n="privacySub"></p>
+          <div class="legal-block"><p data-i18n="priv1text"></p></div>
           <div class="legal-block"><strong data-i18n="priv2title"></strong><p data-i18n="priv2text"></p></div>
           <div class="legal-block"><strong data-i18n="priv3title"></strong><p data-i18n="priv3text"></p></div>
           <div class="legal-block"><strong data-i18n="priv4title"></strong><p data-i18n="priv4text"></p></div>
           <div class="legal-block"><strong data-i18n="priv5title"></strong><p data-i18n="priv5text"></p></div>
           <div class="legal-block"><strong data-i18n="priv6title"></strong><p data-i18n="priv6text"></p></div>
+          <div class="legal-block"><strong data-i18n="priv7title"></strong><p data-i18n="priv7text"></p></div>
+          <div class="legal-block"><strong data-i18n="priv8title"></strong><p data-i18n="priv8text"></p></div>
         </div>
         <div class="drop-pane" id="tab-contact">
-          <h4 class="drop-pane-title" data-i18n="contactTitle">Contacto</h4>
-          <p class="drop-sub" data-i18n="contactSub">Estamos para ayudarte.</p>
-          <div class="contact-grid">
-            <a href="mailto:hola@200mates.com" class="contact-card"><i class="bi bi-envelope contact-icon"></i><div><div class="contact-card-title" data-i18n="contactGeneral">Consultas generales</div><div class="contact-card-email">hola@200mates.com</div></div></a>
-            <a href="mailto:moderacion@200mates.com" class="contact-card"><i class="bi bi-shield-check contact-icon"></i><div><div class="contact-card-title" data-i18n="contactMod">Moderación y reportes</div><div class="contact-card-email">moderacion@200mates.com</div></div></a>
-            <a href="mailto:press@200mates.com" class="contact-card"><i class="bi bi-newspaper contact-icon"></i><div><div class="contact-card-title" data-i18n="contactPress">Prensa y medios</div><div class="contact-card-email">press@200mates.com</div></div></a>
-            <a href="mailto:privacidad@200mates.com" class="contact-card"><i class="bi bi-lock contact-icon"></i><div><div class="contact-card-title" data-i18n="contactPrivacy">Privacidad y datos</div><div class="contact-card-email">privacidad@200mates.com</div></div></a>
-          </div>
-          <div class="contact-delete-box">
-            <i class="bi bi-trash3 me-2" style="color:var(--tierra)"></i>
-            <div><div class="contact-card-title" data-i18n="contactDelete">Eliminar mi mate</div><div class="contact-card-email" data-i18n="contactDeleteNote">Envianos el ID de tu mate y lo eliminamos en 48 hs.</div></div>
-          </div>
-          <p class="contact-social" data-i18n="contactSocial"></p>
+          <h4 class="drop-pane-title" data-i18n="contactTitle"></h4>
+          <p class="drop-sub" data-i18n="contactSub">.</p>
         </div>
       </div>
       <div class="drop-footer">
-        <button class="drop-foot-btn" data-tab="faqs"    data-i18n="menuFaqs">FAQs</button>
-        <button class="drop-foot-btn" data-tab="terms"   data-i18n="menuTerms">Términos</button>
-        <button class="drop-foot-btn" data-tab="privacy" data-i18n="menuPrivacy">Privacidad</button>
-        <button class="drop-foot-btn" data-tab="contact" data-i18n="menuContact">Contacto</button>
+        <button class="drop-foot-btn" data-tab="faqs"    data-i18n="menuFaqs"></button>
+        <button class="drop-foot-btn" data-tab="terms"   data-i18n="menuTerms"></button>
+        <button class="drop-foot-btn" data-tab="privacy" data-i18n="menuPrivacy"></button>
+        <button class="drop-foot-btn" data-tab="contact" data-i18n="menuContact"></button>
       </div>
     </div>
   </div>
