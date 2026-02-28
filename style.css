@@ -332,7 +332,7 @@ h1 {
 .badge-green { background: rgba(122,158,82,.15); color: var(--yerba); border: 1px solid rgba(122,158,82,.35); }
 .badge-warm  { background: rgba(184,148,94,.1);  color: var(--tierra); border: 1px solid rgba(184,148,94,.25); }
 
-/* GALLERY — solo nombre y país ──────────────────────────────────────────────────────*/
+/* GALLERY ──────────────────────────────────────────────────────*/
 
 .gallery-grid { display: flex; flex-direction: column; gap: 8px; }
 
@@ -383,8 +383,7 @@ h1 {
 }
 @keyframes shimmer { to { background-position: -200% 0; } }
 
-
-/*FORM ──────────────────────────────────────────────────────*/
+/* FORM ──────────────────────────────────────────────────────*/
 
 .form-desc { display: none; }
 
@@ -479,7 +478,6 @@ h1 {
 .file-text { font-size: 13px; color: var(--text-muted); }
 .file-sub  { font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: .1em; }
 
-/* ─── FIX: foto completa sin recorte ─── */
 .photo-preview { width: 100%; max-height: 150px; object-fit: contain; display: block; }
 
 /* Submit button */
@@ -520,29 +518,42 @@ h1 {
 .lightbox {
   position: fixed; inset: 0; z-index: 10000;
   display: flex; align-items: center; justify-content: center;
+  padding: 20px;                         /* ← evita que toque los bordes */
 }
 .lightbox-bg { position: absolute; inset: 0; background: rgba(0,0,0,.88); backdrop-filter: blur(8px); cursor: pointer; }
+
+/* ─── FIX PRINCIPAL: altura máxima + scroll interno ─── */
 .lightbox-card {
   position: relative; z-index: 1;
   background: var(--dark-2); border: 1px solid var(--border);
   border-radius: var(--radius-lg); overflow: hidden;
-  max-width: 660px; width: 94%;
+  max-width: 660px !important; width: 94% !important;
+  max-height: 90vh !important;
+  display: flex; flex-direction: column;
+  overflow-y: auto;
   animation: lbIn .22s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--mid) transparent;
 }
+.lightbox-card::-webkit-scrollbar { width: 3px; }
+.lightbox-card::-webkit-scrollbar-thumb { background: var(--mid); border-radius: 3px; }
+
 @keyframes lbIn { from{opacity:0;transform:scale(.94) translateY(8px);} to{opacity:1;transform:none;} }
 
-/* ─── FIX: foto completa sin recorte en lightbox ─── */
+/* ─── FIX IMAGEN: altura relativa al viewport, no fija ─── */
 .lightbox-card img {
   width: 100%;
-  max-height: 560px;
+  max-height: 55vh !important;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
+  background: #000;
 }
 
-.lightbox-info { padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; }
-.lightbox-info .lb-name    { font-family: var(--font); font-size: 22px; font-weight: 700; color: var(--text); }
-.lightbox-info .lb-country { font-size: 13px; color: var(--text-muted); }
-.lightbox-info .lb-detail  { font-size: 12px; color: var(--yerba); margin-top: 2px; }
+.lightbox-info { padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; flex-shrink: 0; }
+.lightbox-info .lb-name    { font-family: var(--font); font-size: 17px; font-weight: 700; color: var(--text); }
+.lightbox-info .lb-country { font-size: 12px; color: var(--text-muted); }
+.lightbox-info .lb-detail  { font-size: 11px; color: var(--yerba); margin-top: 1px; }
 
 .lightbox-info .lb-id {
   font-size: 13px;
@@ -608,7 +619,7 @@ h1 {
 }
 .hstat-sep { font-size: 18px; color: var(--border); user-select: none; line-height: 1; }
 
-/*SUCCESS MODAL ──────────────────────────────────────────────────────*/
+/* SUCCESS MODAL ──────────────────────────────────────────────────────*/
 
 .smodal {
   position: fixed; inset: 0; z-index: 11000;
@@ -626,10 +637,10 @@ h1 {
 }
 .smodal-card {
   position: relative; z-index: 1;
-  width: 90%; max-width: 340px;
+  width: 85% !important; max-width: 280px !important;
   background: #090a07;
   border: 1px solid rgba(122,158,82,.22);
-  border-radius: 22px; overflow: hidden;
+  border-radius: 18px; overflow: hidden;
   box-shadow: 0 0 0 1px rgba(255,255,255,.03), 0 28px 70px rgba(0,0,0,.9);
   transform: translateY(18px) scale(.96); opacity: 0;
   transition: transform .35s cubic-bezier(.34,1.4,.64,1), opacity .28s ease;
@@ -637,7 +648,7 @@ h1 {
 .smodal.open .smodal-card { transform: translateY(0) scale(1); opacity: 1; }
 
 .smodal-top {
-  position: relative; height: 110px;
+  position: relative; height: 80px;
   background: radial-gradient(ellipse at 50% 110%, rgba(61,92,53,.5) 0%, rgba(12,13,10,0) 70%);
   display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
@@ -649,7 +660,7 @@ h1 {
 }
 .smodal-mate-wrap { position: relative; display: flex; flex-direction: column; align-items: center; }
 .smodal-mate-emoji {
-  font-size: 48px; line-height: 1;
+  font-size: 36px; line-height: 1;
   filter: drop-shadow(0 5px 15px rgba(0,0,0,.7));
   animation: mateWobble .6s ease .1s both;
 }
@@ -674,13 +685,13 @@ h1 {
   100% { transform: translateY(-38px) scale(2.4); opacity: 0; }
 }
 .smodal-body {
-  padding: 4px 24px 24px;
+  padding: 2px 18px 18px;
   display: flex; flex-direction: column; align-items: center;
-  text-align: center; gap: 9px;
+  text-align: center; gap: 7px;
 }
 .smodal-title {
   font-family: var(--font);
-  font-size: 20px; font-weight: 700; color: var(--text); margin: 0;
+  font-size: 16px; font-weight: 700; color: var(--text); margin: 0;
   animation: fadeUp .4s ease .2s both;
 }
 .smodal-body1 { font-size: 11px; color: var(--text-muted); line-height: 1.65; margin: 0; animation: fadeUp .4s ease .28s both; }
@@ -704,7 +715,7 @@ h1 {
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
 
-/*RESPONSIVE ──────────────────────────────────────────────────────*/
+/* RESPONSIVE ──────────────────────────────────────────────────────*/
 
 @media (max-width: 768px) {
   .main-layout { flex-direction: column; height: auto; }
@@ -716,6 +727,5 @@ h1 {
   .contact-grid { grid-template-columns: 1fr; }
   .header-stats { display: none; }
   .lightbox-card { max-width: 96vw; }
-  /* ─── FIX: foto completa sin recorte en mobile ─── */
-  .lightbox-card img { max-height: 340px; object-fit: contain; }
+  .lightbox-card img { max-height: 45vh; object-fit: contain; } /* ← reducido en mobile */
 }
