@@ -45,7 +45,14 @@ document.getElementById("mateForm").addEventListener("submit", async e => {
 
   if (!name || !country || !brand || !photo) { alert(t("alertRequired")); return; }
 
-  if (isNaN(lat) || isNaN(lng)) {
+  // Si el usuario eligió país clickeando el mapa, usar siempre la capital de ese país
+  if (selectedIso3) {
+    const iso3 = selectedIso3;
+    countryCode = iso3;
+    const cap = capitalCoords[iso3];
+    if (cap) { lat = cap.lat; lng = cap.lng; }
+  } else if (isNaN(lat) || isNaN(lng)) {
+    // Fallback: si no hay coords válidas, intentar por nombre de país
     const iso3 = countryCode || nameToIso3[country.toLowerCase().trim()];
     if (iso3) {
       countryCode = iso3;
@@ -53,6 +60,7 @@ document.getElementById("mateForm").addEventListener("submit", async e => {
       if (cap) { lat = cap.lat; lng = cap.lng; }
     }
   }
+
   if (!countryCode) {
     const iso3 = nameToIso3[country.toLowerCase().trim()];
     if (iso3) countryCode = iso3;
@@ -79,6 +87,7 @@ document.getElementById("mateForm").addEventListener("submit", async e => {
     }]);
     if (ie) throw ie;
 
+    selectedIso3 = null; // reset selección manual
     setTimeout(() => { globe.controls().autoRotate = true; }, 2000);
 
     showSuccessModal();

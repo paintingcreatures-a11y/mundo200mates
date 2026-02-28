@@ -29,7 +29,7 @@ const numericToIso3 = {
   "624":"GNB","626":"TLS","659":"KNA","662":"LCA","670":"VCT","674":"SMR","688":"SRB",
   "690":"SYC","703":"SVK","705":"SVN","728":"SSD","740":"SUR","748":"SWZ","762":"TJK",
   "768":"TGO","776":"TON","780":"TTO","788":"TUN","795":"TKM","807":"MKD","834":"TZA",
-  "882":"WSM","499":"MNE"
+  "882":"WSM","499":"MNE","304":"GRL","10":"ATA","10":"ATA","20":"AND","28":"ATG","44":"BHS","52":"BRB","84":"BLZ","120":"CMR","854":"BFA","384":"CIV","212":"DMA","308":"GRD","328":"GUY","296":"KIR","584":"MHL","583":"FSM","520":"NRU","585":"PLW","275":"PSE","659":"KNA","662":"LCA","670":"VCT","678":"STP","740":"SUR","798":"TUV","336":"VAT","170":"XKX","344":"HKG","446":"MAC"
 };
 
 const nameToIso3 = {
@@ -91,7 +91,21 @@ const nameToIso3 = {
   "pakistán":"PAK","polonia":"POL","república checa":"CZE",
   "república dominicana":"DOM","rumania":"ROU","rumanía":"ROU","siria":"SYR",
   "sudáfrica":"ZAF","sudán":"SDN","suecia":"SWE","tailandia":"THA",
-  "tayikistán":"TJK","turkmenistán":"TKM","uzbekistán":"UZB"
+  "tayikistán":"TJK","turkmenistán":"TKM","uzbekistán":"UZB",
+  "greenland":"GRL","groenlandia":"GRL",
+  "andorra":"AND","antigua and barbuda":"ATG","antigua":"ATG",
+  "bahamas":"BHS","barbados":"BRB","belize":"BLZ","bhutan":"BTN","bután":"BTN",
+  "burkina faso":"BFA","cote d'ivoire":"CIV","ivory coast":"CIV","costa de marfil":"CIV",
+  "dominica":"DMA","grenada":"GRD","granada":"GRD","guyana":"GUY","guyana":"GUY",
+  "kiribati":"KIR","marshall islands":"MHL","islas marshall":"MHL",
+  "micronesia":"FSM","nauru":"NRU","palau":"PLW",
+  "palestine":"PSE","palestina":"PSE","west bank":"PSE",
+  "saint kitts and nevis":"KNA","saint lucia":"LCA","santa lucía":"LCA",
+  "saint vincent and the grenadines":"VCT","san vicente":"VCT",
+  "sao tome and principe":"STP","santo tomé":"STP",
+  "suriname":"SUR","surinam":"SUR","tuvalu":"TUV",
+  "vatican":"VAT","holy see":"VAT","vaticano":"VAT",
+  "kosovo":"XKX","hong kong":"HKG","macao":"MAC","macau":"MAC"
 };
 
 const iso2ToIso3 = {
@@ -121,5 +135,6 @@ const iso2ToIso3 = {
   "SM":"SMR","TL":"TLS","VU":"VUT","WS":"WSM","TO":"TON","KI":"KIR","FM":"FSM",
   "PW":"PLW","NR":"NRU","FJ":"FJI","SB":"SLB","BN":"BRN","MV":"MDV","OM":"OMN",
   "BH":"BHR","TT":"TTO","BB":"BRB","DM":"DMA","LC":"LCA","GD":"GRD","VC":"VCT",
-  "KN":"KNA","BZ":"BLZ","GY":"GUY","SR":"SUR","TN":"TUN","TW":"TWN"
+  "KN":"KNA","BZ":"BLZ","GY":"GUY","SR":"SUR","TN":"TUN","TW":"TWN",
+  "GL":"GRL","AQ":"ATA","AD":"AND","AG":"ATG","BS":"BHS","BB":"BRB","BZ":"BLZ","BT":"BTN","BF":"BFA","CI":"CIV","DM":"DMA","GD":"GRD","GY":"GUY","KI":"KIR","MH":"MHL","FM":"FSM","NR":"NRU","PW":"PLW","PS":"PSE","KN":"KNA","LC":"LCA","VC":"VCT","ST":"STP","SR":"SUR","TV":"TUV","VA":"VAT","XK":"XKX","HK":"HKG","MO":"MAC"
 };

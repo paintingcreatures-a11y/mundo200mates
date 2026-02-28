@@ -57,8 +57,9 @@ function selectCountry(f) {
   document.getElementById("countryCode").value = iso3;
   const cap = capitalCoords[iso3];
   if (cap) {
-    if (!document.getElementById("lat").value) document.getElementById("lat").value = cap.lat;
-    if (!document.getElementById("lng").value) document.getElementById("lng").value = cap.lng;
+    // Siempre sobreescribe — el usuario eligió este país explícitamente
+    document.getElementById("lat").value = cap.lat;
+    document.getElementById("lng").value = cap.lng;
     globe.controls().autoRotate = false;
     globe.pointOfView({ lat: cap.lat, lng: cap.lng, altitude: 2 }, 800);
   }
