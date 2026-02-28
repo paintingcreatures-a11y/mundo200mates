@@ -47,8 +47,9 @@ async function loadMates() {
     renderGallery();
     updateStats();
 
-    if (matesWithCoords.length > 0 && !globe.controls().autoRotate)
-      globe.pointOfView({ lat: matesWithCoords[0].lat, lng: matesWithCoords[0].lng, altitude: 2 }, 1000);
+    // ── CAMBIO: eliminado el pointOfView automático que reposicionaba
+    // el globo cada 30s al primer mate. El reposicionamiento ahora solo
+    // ocurre cuando el usuario envía su propio mate (ver form.js).
 
   } catch (err) {
     console.error("loadMates error:", err);

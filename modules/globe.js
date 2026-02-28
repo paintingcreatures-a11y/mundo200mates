@@ -27,8 +27,10 @@ globe.controls().enablePan       = false;
 
 let rotateTimer;
 let isZoomed = false;
+let isProgrammaticMove = false; // flag para ignorar eventos durante animaciones
 
 globe.controls().addEventListener("change", () => {
+  if (isProgrammaticMove) return; // ignorar cambios de animaciones programáticas
   const alt = globe.pointOfView().altitude;
   if (alt < ZOOM_THRESHOLD && !isZoomed) {
     isZoomed = true;
@@ -55,8 +57,6 @@ globeEl.addEventListener("touchstart", () => {
   }
 }));
 
-// Fix: cuando el mouse sale del globo sin haber hecho mouseup
-// (ej: hover sobre un marker y salir), reactivar la rotación
 globeEl.addEventListener("mouseleave", () => {
   if (!isZoomed) {
     clearTimeout(rotateTimer);
@@ -90,7 +90,10 @@ function renderPolygons() {
         colored.includes(d.iso3) ? .012 :
         0
       )
-      .onPolygonClick(p => { globe.controls().autoRotate = false; selectCountry(p); })
+      .onPolygonClick(p => {
+        clearTimeout(rotateTimer);
+        selectCountry(p);
+      })
       .onPolygonHover(h => { globeEl.style.cursor = h ? "pointer" : "default"; })
       .polygonsData(countriesGeo.slice());
   }, 60);
@@ -155,7 +158,18 @@ function renderMarkers(mates) {
       wrapper.appendChild(emoji);
 
       wrapper.addEventListener("mouseenter", () => {
-        clearTimeout(rotateTimer); // evitar que el timer reactive la rotación mientras se hace hover
+        clearTimeout(rotateTimer);
+        // Detectar si hay espacio arriba (considerando el navbar ~80px)
+        const rect = wrapper.getBoundingClientRect();
+        const cardHeight = 175;
+        const spaceAbove = rect.top - 80;
+        if (spaceAbove < cardHeight) {
+          card.style.bottom = "auto";
+          card.style.top    = "36px";
+        } else {
+          card.style.bottom = "36px";
+          card.style.top    = "auto";
+        }
         card.style.opacity    = "1";
         card.style.transform  = "translateX(-50%) scale(1)";
         emoji.style.transform = "scale(1.35)";
@@ -165,7 +179,6 @@ function renderMarkers(mates) {
         card.style.opacity    = "0";
         card.style.transform  = "translateX(-50%) scale(.85)";
         emoji.style.transform = "scale(1)";
-        // Al salir del marker, reactivar rotación si no está zoomeado
         if (!isZoomed) {
           clearTimeout(rotateTimer);
           rotateTimer = setTimeout(() => { globe.controls().autoRotate = true; }, 1200);

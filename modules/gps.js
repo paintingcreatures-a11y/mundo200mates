@@ -57,11 +57,15 @@ function selectCountry(f) {
   document.getElementById("countryCode").value = iso3;
   const cap = capitalCoords[iso3];
   if (cap) {
-    // Siempre sobreescribe — el usuario eligió este país explícitamente
     document.getElementById("lat").value = cap.lat;
     document.getElementById("lng").value = cap.lng;
+    // CAMBIO: detener rotación y volar al país sin que se reactive
+    clearTimeout(rotateTimer);
+    isZoomed = true;
+    isProgrammaticMove = true;
     globe.controls().autoRotate = false;
-    globe.pointOfView({ lat: cap.lat, lng: cap.lng, altitude: 2 }, 800);
+    globe.pointOfView({ lat: cap.lat, lng: cap.lng, altitude: 0.8 }, 800);
+    setTimeout(() => { isProgrammaticMove = false; }, 900);
   }
   const s = document.getElementById("gpsStatus");
   s.textContent      = `${t("gpsSelected")}${pretty}`;

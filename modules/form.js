@@ -45,14 +45,12 @@ document.getElementById("mateForm").addEventListener("submit", async e => {
 
   if (!name || !country || !brand || !photo) { alert(t("alertRequired")); return; }
 
-  // Si el usuario eligió país clickeando el mapa, usar siempre la capital de ese país
   if (selectedIso3) {
     const iso3 = selectedIso3;
     countryCode = iso3;
     const cap = capitalCoords[iso3];
     if (cap) { lat = cap.lat; lng = cap.lng; }
   } else if (isNaN(lat) || isNaN(lng)) {
-    // Fallback: si no hay coords válidas, intentar por nombre de país
     const iso3 = countryCode || nameToIso3[country.toLowerCase().trim()];
     if (iso3) {
       countryCode = iso3;
@@ -87,8 +85,19 @@ document.getElementById("mateForm").addEventListener("submit", async e => {
     }]);
     if (ie) throw ie;
 
-    selectedIso3 = null; // reset selección manual
-    setTimeout(() => { globe.controls().autoRotate = true; }, 2000);
+    selectedIso3 = null;
+
+    // CAMBIO: volar al país del mate enviado y dejar el globo fijo ahí
+    // altitude: 1.5 → por debajo de ZOOM_THRESHOLD (1.8), así el listener
+    // "change" mantiene isZoomed=true y el mapa no vuelve a girar nunca
+    if (!isNaN(lat) && !isNaN(lng)) {
+      clearTimeout(rotateTimer);
+      isZoomed = true;
+      isProgrammaticMove = true;
+      globe.controls().autoRotate = false;
+      globe.pointOfView({ lat, lng, altitude: 0.8 }, 1500);
+      setTimeout(() => { isProgrammaticMove = false; }, 1600);
+    }
 
     showSuccessModal();
 
