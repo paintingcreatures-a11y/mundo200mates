@@ -5,11 +5,11 @@
 `Nace con el deseo de crear un espacio donde se pueda compartir y explorar esta tradición, no solo mapeándola alrededor del mundo, sino mostrando todas las formas en que se lo consume.`
 
 ### Incluye
-`- Mapa interactivo: observa cómo viaja el mate alrededor del mundo.`
+`- Mapa interactivo: para ver cómo viaja el mate alrededor del mundo.`
 
-`- Historias compartidas: registrar tus mates y descubrir el de otros.`
+`- Historias compartidas: para registrar tus mates y descubrir el de otros.`
 
-`- Exploración cultural: conoce diferentes formas de consumir y disfrutar el mate.`
+`- Exploración cultural: para conoce diferentes formas de consumir y disfrutar el mate.`
 
 ##
 https://paintingcreatures-a11y.github.io/200mates/
