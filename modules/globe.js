@@ -40,14 +40,29 @@ globe.controls().addEventListener("change", () => {
   }
 });
 
-globeEl.addEventListener("mousedown",  () => { globe.controls().autoRotate = false; });
-globeEl.addEventListener("touchstart", () => { globe.controls().autoRotate = false; });
+globeEl.addEventListener("mousedown", () => {
+  clearTimeout(rotateTimer);
+  globe.controls().autoRotate = false;
+});
+globeEl.addEventListener("touchstart", () => {
+  clearTimeout(rotateTimer);
+  globe.controls().autoRotate = false;
+});
 ["mouseup", "touchend"].forEach(ev => globeEl.addEventListener(ev, () => {
   if (!isZoomed) {
     clearTimeout(rotateTimer);
     rotateTimer = setTimeout(() => { globe.controls().autoRotate = true; }, 2000);
   }
 }));
+
+// Fix: cuando el mouse sale del globo sin haber hecho mouseup
+// (ej: hover sobre un marker y salir), reactivar la rotación
+globeEl.addEventListener("mouseleave", () => {
+  if (!isZoomed) {
+    clearTimeout(rotateTimer);
+    rotateTimer = setTimeout(() => { globe.controls().autoRotate = true; }, 1200);
+  }
+});
 
 window.addEventListener("resize", () => {
   const { w, h } = getGlobeDimensions();
@@ -140,6 +155,7 @@ function renderMarkers(mates) {
       wrapper.appendChild(emoji);
 
       wrapper.addEventListener("mouseenter", () => {
+        clearTimeout(rotateTimer); // evitar que el timer reactive la rotación mientras se hace hover
         card.style.opacity    = "1";
         card.style.transform  = "translateX(-50%) scale(1)";
         emoji.style.transform = "scale(1.35)";
@@ -149,6 +165,11 @@ function renderMarkers(mates) {
         card.style.opacity    = "0";
         card.style.transform  = "translateX(-50%) scale(.85)";
         emoji.style.transform = "scale(1)";
+        // Al salir del marker, reactivar rotación si no está zoomeado
+        if (!isZoomed) {
+          clearTimeout(rotateTimer);
+          rotateTimer = setTimeout(() => { globe.controls().autoRotate = true; }, 1200);
+        }
       });
       wrapper.addEventListener("click", () => openLightbox(d));
 
