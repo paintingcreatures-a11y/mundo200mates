@@ -58,7 +58,7 @@
     </div>
   </header>
 
-  <!-- ═══════════════════ MAIN ═══════════════════ -->
+  <!-- MAIN ────────────────────────────────────────────────────── -->
   <main class="main-layout">
 
     <section class="globe-section">
@@ -148,10 +148,10 @@
     </aside>
   </main>
 
-  <!-- ═══════════════════ POPUP ═══════════════════ -->
+  <!-- POPUP ──────────────────────────────────────────────────────-->
   <div id="popup" class="globe-popup" style="display:none"></div>
 
-  <!-- ═══════════════════ LIGHTBOX ═══════════════════ -->
+  <!-- LIGHTBOX ──────────────────────────────────────────────────────-->
   <div id="lightbox" class="lightbox" style="display:none">
     <div class="lightbox-bg" id="lightboxBg"></div>
     <div class="lightbox-card">
@@ -161,7 +161,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ SUCCESS MODAL ═══════════════════ -->
+  <!-- SUCCESS MODAL ────────────────────────────────────────────────────── -->
   <div id="successModal" class="smodal">
     <div class="smodal-bg" id="successModalBg"></div>
     <div class="smodal-card">
@@ -183,7 +183,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ DROPDOWN MENU ═══════════════════ -->
+  <!-- DROPDOWN MENU ──────────────────────────────────────────────────────-->
   <div id="dropMenu" class="drop-menu" aria-hidden="true">
     <div id="dropBackdrop" class="drop-backdrop"></div>
     <div class="drop-panel">
@@ -195,7 +195,7 @@
       </div>
       <div class="drop-content">
         <div class="drop-pane active" id="tab-about">
-          <p data-i18n="aboutText1"></p><p data-i18n="aboutText2"></p><p data-i18n="aboutText3"></p></p><p data-i18n="aboutText4"></p>
+          <p data-i18n="aboutText1"></p><p data-i18n="aboutText2"></p><p data-i18n="aboutText3"></p><p data-i18n="aboutText4"></p>
         </div>
         <div class="drop-pane" id="tab-support">
           <p data-i18n="supportText1"></p><p data-i18n="supportText2"></p>
@@ -204,7 +204,6 @@
           <p data-i18n="modText1"></p><p data-i18n="modText2"></p><p data-i18n="modText3"></p><p data-i18n="modText4"></p><p data-i18n="modText5"></p><p data-i18n="modText6"></p><p data-i18n="modText7"></p>
         </div>
         <div class="drop-pane" id="tab-press">
-          <h4 class="drop-pane-title" data-i18n="menuPress"></h4>
           <p data-i18n="pressText1"></p>
         </div>
         <div class="drop-pane" id="tab-faqs">
@@ -247,6 +246,18 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="i18n.js"></script>
+  <script src="config/constants.js"></script>
+  <script src="data/iso-tables.js"></script>
+  <script src="data/capital-coords.js"></script>
+  <script src="modules/state.js"></script>
+  <script src="modules/utils.js"></script>
+  <script src="modules/globe.js"></script>
+  <script src="modules/gps.js"></script>
+  <script src="modules/gallery.js"></script>
+  <script src="modules/modal.js"></script>
+  <script src="modules/form.js"></script>
+  <script src="modules/menu.js"></script>
   <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>

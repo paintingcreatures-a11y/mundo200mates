@@ -4,23 +4,23 @@
 
 const i18n = {
   es: {
-    // Header & counters
+    // Header & counters ───────────────────────────────────────────
     title:            "Vuelta al Mundo en unos 200 Mates",
     mates:            "Mates",
     countries:        "Países",
     spinHint:         "← Girá el globo →",
 
-    // Gallery
+    // Gallery ────────────────────────────────────────────────────
     statMates:        "Mates",
     statCountries:    "Países",
     recentMates:      "Últimos Mates",  
 
-    // Form
+    // Form ──────────────────────────────────────────────────────
     formTitle:        "Cebate uno",
     gpsRequesting:    "📍 Solicitando ubicación…",
     gpsDetecting:     "📍 Detectando ubicación…",
-    gpsNoGps:         "⚠️ GPS no disponible — ingresá tu país manualmente.",
-    gpsNoPermission:  "⚠️ Sin GPS — ingresá tu país manualmente.",
+    gpsNoGps:         "GPS no disponible — ingresá tu país manualmente.",
+    gpsNoPermission:  "Sin GPS — ingresá tu país manualmente.",
     gpsManual:        " — escribí tu país",
     gpsSelected:        "País seleccionado: ", 
    labelPrep:           "Estilo favorito*",
@@ -38,12 +38,12 @@ const i18n = {
     fileDropSub:      "JPG, PNG — máx 5MB",
     submitBtn:        "Enviar",
 
-    // Alerts
+    // Alerts ──────────────────────────────────────────────────────
     alertRequired:    "Por favor completá los campos obligatorios y adjuntá una foto.",
     alertSuccess:     "¡Mate enviado! Aparecerá en el mapa una vez aprobado.",
     alertError:       "Error al enviar: ",
 
-    // Gallery & lightbox
+    // Gallery & lightbox ───────────────────────────────────────────
     errorLoading:     "Error cargando mates.",
     anonymous:        "Anónimo", 
     mateId:           "#: ",
@@ -51,7 +51,7 @@ const i18n = {
     copied:           "copiado",
     deleteNote:       "Para solicitar la eliminación de tu mate, compartí este # con nosotros.",
 
-    // Menu nav
+    // Menu nav ─────────────────────────────────────────────────────
     menuAbout:        "El proyecto",
     menuSupport:      "Colaborá",
     menuModeration:   "Convivencia",
@@ -61,17 +61,17 @@ const i18n = {
     menuPrivacy:      "Privacidad",
     menuContact:      "Contacto",
 
-    // About
+    // About ──────────────────────────────────────────────────────
     aboutText1:       "Somos un proyecto colaborativo que nace del deseo de visibilizar una tradición profundamente arraigada en el sur de América del Sur: el mate.",
     aboutText2:       "Más que una bebida, el mate es hospitalidad, encuentro y pertenencia.",
     aboutText3:       "Este proyecto busca mapear el mate en el mundo para entender cómo viaja y cómo se transforma. Queremos saber cuándo se toma y en qué contextos: solo o acompañado; por la mañana, por la tarde o por la noche; trabajando o descansando; en casa o al aire libre; con pan, galletas, bizcochos, queso o fruta; dulce o amargo; caliente o frío; con o sin yuyos.",
     aboutText4:       "En tiempos en los que lo extranjero suele mirarse con desconfianza, creemos que compartir prácticas cotidianas es una manera de generar cercanía. Conocer cómo vive el otro, qué rituales sostiene y qué tradiciones lo acompañan nos permite entendernos más allá de las fronteras.",
 
-    // Support
+    // Support ─────────────────────────────────────────────────────
     supportText1:     "Por ahora, todos los recursos que usamos son gratuitos, pero en el futuro podría ser necesario migrar a plataformas de pago. Cuando eso ocurra, habrá una opción de donación para ayudar a mantener el sitio activo.",
     supportText2:     `Mientras tanto, la forma más valiosa en que nos podés ayudar es mejorando las traducciones. Si tenés sugerencias, ¡envíala a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
   
-    // Moderation
+    // Moderation ───────────────────────────────────────────────────
     modText1:         "Antes de aparecer en el mapa, todos los registros son revisados por un pequeño grupo de voluntarios. Esto nos ayuda a que el contenido sea seguro, respetuoso y que todos podamos disfrutar del proyecto.",
     modText2:         "No publicaremos registros que:",
     modText3:         "Comprometan tu anonimato o el de otros: no se aprobarán publicaciones que incluyan apellidos, números de teléfono, correos electrónicos, perfiles de redes sociales, fotos donde se vean claramente los rostros o direcciones exactas.",
@@ -80,10 +80,10 @@ const i18n = {
     modText6:         "No estén relacionadas con el mate: solo publicamos fotos y registros sobre esta tradición.",
     modText7:         "La revisión puede tomar un poquito de tiempo. ¡Gracias por tu paciencia y por formar parte de esta comunidad!",
 
-    // Press
+    // Press ──────────────────────────────────────────────────────
     pressText1:       "¿Sos periodista o creador de contenido y querés escribir sobre este proyecto? ¡Nos encantaría que lo hagas!",
 
-    // FAQs
+    // FAQs ──────────────────────────────────────────────────────
     faq1q:            "¿Por qué no veo mi registro en el mapa?",
     faq1a:            "No te preocupes, en la mayoría de los casos es porque todavía no hemos tenido tiempo de revisarlo. Todos los registros son revisados por un pequeño grupo de voluntarios antes de aparecer en el mapa, para asegurarnos de que sean respetuosos y seguros. Tan pronto como lo revisemos, aparecerá en el mapa.",
    
@@ -93,7 +93,7 @@ const i18n = {
     faq3q:            "¿Qué datos se recopilan?",
     faq3a:            "Solo usamos la información que compartís en el formulario, la ubicación que decidiste mostrar en el mapa y la fecha y hora de envío. No recolectamos ningún otro dato personal.",
 
-    // Terms
+    // Terms ──────────────────────────────────────────────────────
     terms1title:      "Condiciones de Uso",
     terms1text:       "Al usar nuestros servicios, aceptas nuestras Condiciones de Uso y nuestra Política de Privacidad. Si no estás de acuerdo, por favor, no uses nuestros servicios.",
     
@@ -101,15 +101,15 @@ const i18n = {
     terms2text:       "Al subir contenido, nos das permiso a nosotros y a otros usuarios para verlo, compartirlo y usarlo de manera personal y respetuosa.",
    
     terms4title:      "Normas sobre el contenido",
-    terms4text:       "- No publiques contenido que comprometa la privacidad de nadie.", // No se poner viñetas
-    terms5text:       "- No se permiten publicaciones que promuevan odio, violencia o discriminación.", // No se poner viñetas
-    terms6text:       "- No se permite spam ni publicidad.",// No se poner viñetas
-    terms7text:       "- Solo publicamos contenido relacionado con la tradición del mate.",// No se poner viñetas
+    terms4text:       "No publiques contenido que comprometa la privacidad de nadie.", 
+    terms5text:       "No se permiten publicaciones que promuevan odio, violencia o discriminación.", 
+    terms6text:       "No se permite spam ni publicidad.",
+    terms7text:       "Solo publicamos contenido relacionado con la tradición del mate.",
     
     terms8title:      "Uso personal",
     terms8text:       "La plataforma es solo para uso personal y no comercial.",
 
-    // Privacy
+    // Privacy ──────────────────────────────────────────────────────
     privacySub:       "Última actualización: febrero 2026",
     
     priv1text:        "Gracias por ser parte y por compartir tu experiencia. Sabemos que detrás de cada aporte hay una historia, y queremos cuidar ese gesto.",
@@ -135,10 +135,10 @@ const i18n = {
     priv8title:       "Cambios",
     priv8text:        "Si en algún momento actualizamos este texto, la versión publicada será la vigente.",
 
-    // Contact
+    // Contact ──────────────────────────────────────────────────────
     contactSub:       `¿Tenés preguntas, sugerencias o querés colaborar con el proyecto? Escribinos a <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> y te responderemos lo antes posible.`, 
     
-    //modal
+    // Modal ──────────────────────────────────────────────────────
     successTitle:  "¡Mate enviado!",
     successBody1:  "Tu mate está en revisión. Una vez aprobado, aparecerá en el mapa.",
     successBody2:  "Gracias!",
@@ -147,23 +147,23 @@ const i18n = {
 
   //EN ===============================================================================================================================
   en: {
-      // Header & counters
+      // Header & counters ───────────────────────────────────────────
     title:            "Around the World in about 200 Mates",
     mates:            "Mates",
     countries:        "Countries",
     spinHint:         "← Spin the globe →",
 
-    // Gallery
+    // Gallery ──────────────────────────────────────────────────────
     statMates:        "Mates",
     statCountries:    "Countries",
     recentMates:      "Last Mates",  
 
-    // Form
+    // Form ──────────────────────────────────────────────────────
     formTitle:       "Make yourself a mate and join in",
     gpsRequesting:   "📍 Requesting your location…",
     gpsDetecting:    "📍 Detecting your location…",
-    gpsNoGps:        "⚠️ GPS not available — please enter your country manually.",
-    gpsNoPermission: "⚠️ Location access not enabled — please enter your country manually.",
+    gpsNoGps:        "GPS not available — please enter your country manually.",
+    gpsNoPermission: "Location access not enabled — please enter your country manually.",
     gpsManual:       " — type your country",
     gpsSelected:        "País seleccionado: ", 
    labelPrep:           "Favorite style*",
@@ -181,12 +181,12 @@ const i18n = {
     fileDropSub:      "JPG, PNG — máx 5MB",
     submitBtn:        "Submit",
 
-    // Alerts
+    // Alerts ──────────────────────────────────────────────────────
     alertRequired: "Please complete the required fields and add a photo.",
     alertSuccess:  "Your mate is on its way! It will show up on the map once approved.",
     alertError:    "Oops! Something went wrong: ",
 
-    // Gallery & lightbox
+    // Gallery & lightbox ───────────────────────────────────────────
     errorLoading: "Error loading mates.",
     anonymous:    "Anonymous",
     mateId:       "#: ",
@@ -194,7 +194,7 @@ const i18n = {
     copied:       "copied",
     deleteNote:   "If you'd like to request your mate’s removal, just share this # with us.",
 
-    // Menu nav
+    // Menu nav ──────────────────────────────────────────────────────
     menuAbout:        "The Project",
     menuSupport:      "Help Us",
     menuModeration:   "Getting Along",
@@ -204,17 +204,17 @@ const i18n = {
     menuPrivacy:      "Privacy Policy",
     menuContact:      "Contact",
 
-    // About
+    // About ──────────────────────────────────────────────────────
     aboutText1:       "We are a collaborative project born from the desire to make visible a tradition deeply rooted in the southern part of South America: mate.",
     aboutText2:       "More than a drink, mate is hospitality, connection, and belonging.",
     aboutText3:       "This project seeks to map mate around the world to understand how it travels and how it transforms. We want to know when it's shared and in what contexts: alone or with others; in the morning, afternoon, or at night; while working or resting; at home or outdoors; with bread, cookies, pastries, cheese, or fruit; sweet or bitter; hot or cold; with or without herbs.",
     aboutText4:       "At a time when what is foreign is often met with suspicion, we believe that sharing everyday practices is a way of creating closeness. Understanding how others live, the rituals they keep, and the traditions that accompany them allows us to connect beyond borders.",
     
-    // Support
+    // Support ──────────────────────────────────────────────────────
     supportText1:     "For now, all the resources we use are free, but in the future it might be necessary to move to paid platforms. When that happens, there will be an option to donate to help keep the site running.",
     supportText2:     `In the meantime, the most valuable way you can help is by improving the translations. If you have suggestions, please send them to <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
   
-    // Moderation
+    // Moderation ──────────────────────────────────────────────────────
     modText1:         "Before appearing on the map, all submissions are reviewed by a small group of volunteers. This helps ensure that the content is safe, respectful, and that everyone can enjoy the project.",
     modText2:         "We will not publish submissions that:",
     modText3:         "Compromise your privacy or others': submissions containing last names, phone numbers, email addresses, social media profiles, photos where faces are clearly visible, or exact addresses will not be approved.",
@@ -223,10 +223,10 @@ const i18n = {
     modText6:         "Are unrelated to mate: we only publish photos and submissions about this tradition.",
     modText7:         "Reviews may take a little time. Thank you for your patience and for being part of this community!",
 
-    // Press
+    // Press ──────────────────────────────────────────────────────
     pressText1:       "Are you a journalist or content creator and want to write about this project? We'd love for you to do it!",
 
-    // FAQs
+    // FAQs ──────────────────────────────────────────────────────
     faq1q:            "Why can't I see my post on the map?",
     faq1a:            "Don't worry! In most cases, it's simply because we haven't had time to review it yet. All posts are reviewed by a small group of volunteers before appearing on the map, to make sure they are respectful and safe. As soon as we review it, your post will be visible!",
    
@@ -236,7 +236,7 @@ const i18n = {
     faq3q:            "What data does the site collect?",
     faq3a:            "We only use the information you provide in the form, the location you chose to show on the map, and the date and time of submission. We don't collect any other personal data.",
     
-    // Terms
+    // Terms ──────────────────────────────────────────────────────
     terms1title:      "Terms of Use",
     terms1text:       "By using our services, you agree to our Terms of Use and Privacy Policy. If you do not agree, please do not use our services.",
     
@@ -244,15 +244,15 @@ const i18n = {
     terms2text:       "When you upload content, you give us and other users permission to view, share, and use it in a personal and respectful way.",
    
     terms4title:      "Content guidelines",
-    terms4text:       "- Do not post anything that compromises anyone's privacy.", // No se poner viñetas
-    terms5text:       "- Do not post content that promotes hate, violence, or discrimination.", // No se poner viñetas
-    terms6text:       "- No spam or advertising is allowed.",// No se poner viñetas
-    terms7text:       "- Only content related to the mate tradition will be published.",// No se poner viñetas
+    terms4text:       "Do not post anything that compromises anyone's privacy.", 
+    terms5text:       "Do not post content that promotes hate, violence, or discrimination.",
+    terms6text:       "No spam or advertising is allowed.",
+    terms7text:       "Only content related to the mate tradition will be published.",
     
     terms8title:      "Personal use only",
     terms8text:       "The platform is for personal, non-commercial use only.",
 
-    // Privacy
+    // Privacy ──────────────────────────────────────────────────────
     privacySub:       "Last updated: February 26, 2026",
     
     priv1text:        "Thank you for being part of this and for sharing your experience. We know that behind every contribution there is a story, and we want to care for that gesture.",
@@ -278,10 +278,10 @@ const i18n = {
     priv8title:       "Changes",
     priv8text:        "If we update this text, the version published on the site will be the current one.",
 
-    // Contact
+    // Contact ──────────────────────────────────────────────────────
     contactSub:       `Do you have questions, suggestions, or want to collaborate with the project? Write to us at <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> and we'll get back to you as soon as possible.`,
     
-    //modal
+    // Modal ──────────────────────────────────────────────────────
     successTitle: "Your mate is on its way!",
     successBody1: "It’s now under review and will appear on the map once approved.",
     successBody2:  "Thanks",
@@ -291,23 +291,23 @@ const i18n = {
 
   //PT ===============================================================================================================================
   pt: {
-     // Header & counters
+     // Header & counters ────────────────────────────────────────────
     title:            "Volta ao Mundo em cerca de 200 Mates",
     mates:            "Mates",
     countries:        "Países na rodada",
     spinHint:         "← Gira o globo →",
 
-    // Gallery
+    // Gallery ──────────────────────────────────────────────────────
     statMates:        "Mates",
     statCountries:    "Paises",
     recentMates:      "Últimos Mates",  
 
-    // Form
+    // Form ──────────────────────────────────────────────────────
     formTitle:       "Faz um mate",
     gpsRequesting:   "📍 Solicitando sua localização…",
     gpsDetecting:    "📍 Detectando sua localização…",
-    gpsNoGps:        "⚠️ GPS não disponível — por favor, informe seu país manualmente.",
-    gpsNoPermission: "⚠️ Sem acesso à localização — por favor, informe seu país manualmente.",
+    gpsNoGps:        "GPS não disponível — por favor, informe seu país manualmente.",
+    gpsNoPermission: "Sem acesso à localização — por favor, informe seu país manualmente.",
     gpsManual:       " — digite seu país",
     gpsSelected:     "País selecionado: ", 
    labelPrep:           "Estilo favorito*",
@@ -325,12 +325,12 @@ const i18n = {
     fileDropSub:         "JPG, PNG — máx. 5MB",
     submitBtn:           "Enviar",
 
-    // Alerts
+    // Alerts ──────────────────────────────────────────────────────
     alertRequired: "Por favor, complete os campos obrigatórios e envie uma foto.",
     alertSuccess:  "Seu mate foi enviado! Ele aparecerá no mapa assim que for aprovado.",
     alertError:    "Ops! Algo deu errado ao enviar: ",
 
-    // Gallery & lightbox
+    // Gallery & lightbox ───────────────────────────────────────────
     errorLoading:     "Erro ao carregar mates.",
     anonymous:        "Anônimo", 
     mateId:       "#: ",
@@ -338,7 +338,7 @@ const i18n = {
     copied:       "copiado",
     deleteNote: "Se quiser remover seu mate, é só compartilhar este # com a gente.",
 
-    // Menu nav
+    // Menu nav ──────────────────────────────────────────────────────
     menuAbout:      "O projeto",
     menuSupport:    "Colabore",
     menuModeration: "Convivência",
@@ -348,17 +348,17 @@ const i18n = {
     menuPrivacy:    "Privacidade",
     menuContact:    "Contato",
 
-    // About
+    // About ──────────────────────────────────────────────────────
     aboutText1:  "Somos um projeto colaborativo, que nasceu do desejo de dar visibilidade a uma tradição profundamente enraizada no sul da América do Sul: o mate.",     
     aboutText2:  "Mais do que uma bebida, o mate é hospitalidade, encontro e pertencimento.",
     aboutText3:  "Este projeto busca mapear o mate pelo mundo para entender como ele viaja e como se transforma. Queremos saber quando ele é consumido e em que contextos: sozinho ou acompanhado; de manhã, à tarde ou à noite; trabalhando ou descansando; em casa ou ao ar livre; com pão, biscoitos, queijo ou fruta; doce ou amargo; quente ou frio; com ou sem ervas.",
     aboutText4:  "Em tempos em que o que é estrangeiro muitas vezes é visto com desconfiança, acreditamos que compartilhar práticas cotidianas é uma forma de criar proximidade. Conhecer como o outro vive, quais rituais mantém e quais tradições acompanham sua vida nos permite nos entender além das fronteiras.",
 
-    // Support
+    // Support ──────────────────────────────────────────────────────
     supportText1:     "Por enquanto, todos os recursos que usamos são gratuitos, mas no futuro pode ser necessário migrar para plataformas pagas. Quando isso acontecer, haverá uma opção de doação para ajudar a manter o site ativo.",
     supportText2:     `Enquanto isso, a forma mais valiosa de nos ajudar é aprimorando as traduções. Se tiver sugestões, envie para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a>!`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
   
-    // Moderation
+    // Moderation ──────────────────────────────────────────────────────
     modText1:         "Antes de aparecer no mapa, todos os registros são revisados por um pequeno grupo de voluntários. Isso nos ajuda a garantir que o conteúdo seja seguro, respeitoso e que todos possam aproveitar o projeto.",
     modText2:         "Não publicaremos registros que:",
     modText3:         "Comprometam o anonimato seu ou de outros: não serão aprovadas publicações com sobrenomes, números de telefone, e-mails, perfis de redes sociais, fotos com rostos visíveis ou endereços exatos.",
@@ -367,10 +367,10 @@ const i18n = {
     modText6:         "Não estejam relacionados ao mate: publicamos apenas fotos e registros sobre essa tradição.",
     modText7:         "A revisão pode levar um pouquinho. Obrigado pela paciência e por fazer parte desta comunidade!",
 
-    // Press
+    // Press ──────────────────────────────────────────────────────
     pressText1:       "Você é jornalista ou criador de conteúdo e quer escrever sobre este projeto? Adoraríamos!",
 
-    // FAQs
+    // FAQs ──────────────────────────────────────────────────────
     faq1q:            "Por que não vejo meu registro no mapa?",
     faq1a:            "Fique tranquilo/a, na maioria dos casos é porque ainda não tivemos tempo de revisá-lo. Todos os registros passam por um pequeno grupo de voluntários antes de aparecer no mapa, para garantir que sejam respeitosos e seguros. Assim que for revisado, seu registro aparecerá no mapa!",
    
@@ -380,7 +380,7 @@ const i18n = {
     faq3q:            "Quais dados o site coleta?",
     faq3a:            "Usamos apenas as informações que você compartilha no formulário, a localização que escolheu mostrar no mapa, e a data e hora do envio. Não coletamos nenhum outro dado pessoal.",
 
-    // Terms
+    // Terms ──────────────────────────────────────────────────────
     terms1title:      "Termos de Uso",
     terms1text:       "Ao usar nossos serviços, você concorda com nossos Termos de Uso e Política de Privacidade. Se não concordar, por favor, não utilize nossos serviços.",
     
@@ -388,15 +388,15 @@ const i18n = {
     terms2text:       "Ao enviar conteúdo, você nos dá permissão e aos outros usuários para visualizá-lo, compartilhá-lo e usá-lo de forma pessoal e respeitosa.",
    
     terms4title:      "Regras de conteúdo",
-    terms4text:       "- Não publique nada que comprometa a privacidade de alguém.", // No se poner viñetas
-    terms5text:       "- Não publique conteúdo que promova ódio, violência ou discriminação.", // No se poner viñetas
-    terms6text:       "- Não é permitido spam ou publicidade.",// No se poner viñetas
-    terms7text:       "- Só publicamos conteúdo relacionado à tradição do mate.",// No se poner viñetas
+    terms4text:       "Não publique nada que comprometa a privacidade de alguém.", 
+    terms5text:       "Não publique conteúdo que promova ódio, violência ou discriminação.", 
+    terms6text:       "Não é permitido spam ou publicidade.",
+    terms7text:       "Só publicamos conteúdo relacionado à tradição do mate.",
     
     terms8title:      "Uso pessoal",
     terms8text:       "A plataforma é para uso pessoal e não comercial.",
 
-    // Privacy
+    // Privacy ──────────────────────────────────────────────────────
     privacySub:       "Última atualização: 26 de fevereiro de 2026",
     
     priv1text:        "Obrigado por fazer parte e por compartilhar sua experiência. Sabemos que por trás de cada contribuição existe uma história, e queremos cuidar desse gesto.",
@@ -422,10 +422,10 @@ const i18n = {
     priv8title:       "Alterações",
     priv8text:        "Se atualizarmos este texto, a versão publicada no site será a vigente.",
 
-    // Contact
+    // Contact ──────────────────────────────────────────────────────
     contactSub:       `Você tem perguntas, sugestões ou quer colaborar com o projeto? Escreva para <a href="mailto:paintingcreatures+200mates@gmail.com">200mates</a> e responderemos o mais rápido possível.`, //Esto fue lo que hice en HTML para que no aparezca el correo visible y solo aparezca como un link, no se como hacerlo en este lenguaje
    
-    //modal
+    // Modal ──────────────────────────────────────────────────────
     successTitle: "Seu mate foi enviado!",
     successBody1: "Ele está em revisão e aparecerá no mapa assim que for aprovado.",
     successBody2:  "Obrigado!",
@@ -434,5 +434,5 @@ const i18n = {
 
   };
 
-// Export 
+// Export ──────────────────────────────────────────────────────
 window.i18n = i18n;

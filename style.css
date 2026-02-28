@@ -44,9 +44,8 @@ body::before {
   pointer-events: none; z-index: 9990; opacity: 0.4;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   HEADER
-   ══════════════════════════════════════════════════════════════ */
+/* HEADER ──────────────────────────────────────────────────────*/
+
 .site-header {
   position: sticky; top: 0; z-index: 500;
   background: rgba(12, 13, 10, 0.97);
@@ -93,9 +92,8 @@ h1 {
 .lang-btn.active { color: var(--yerba); background: rgba(122,158,82,.14); }
 .lang-sep { color: var(--text-muted); font-size: 12px; }
 
-/* ══════════════════════════════════════════════════════════════
-   HAMBURGER
-   ══════════════════════════════════════════════════════════════ */
+/* HAMBURGER ──────────────────────────────────────────────────────*/
+
 .ham-btn {
   width: 52px; height: 52px;
   border-radius: 12px;
@@ -126,9 +124,8 @@ h1 {
 .ham-btn.is-open { border-color: var(--yerba); background: rgba(122,158,82,.1); }
 .ham-btn.is-open .ham-bar { background: var(--yerba); }
 
-/* ══════════════════════════════════════════════════════════════
-   DROPDOWN MENU
-   ══════════════════════════════════════════════════════════════ */
+/* DROPDOWN MENU ──────────────────────────────────────────────────────*/
+
 .drop-menu {
   position: fixed; inset: 0; z-index: 600;
   pointer-events: none; opacity: 0;
@@ -281,9 +278,8 @@ h1 {
 .drop-foot-btn:hover { color: var(--text); background: rgba(255,255,255,.02); }
 .drop-foot-btn.active { color: var(--yerba); }
 
-/* ══════════════════════════════════════════════════════════════
-   MAIN LAYOUT
-   ══════════════════════════════════════════════════════════════ */
+/* MAIN LAYOUT ──────────────────────────────────────────────────────*/
+
 .main-layout {
   display: flex;
   height: calc(100vh - 100px);
@@ -324,7 +320,7 @@ h1 {
   display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
 }
 
-/* ── Badge — RECIENTES más grande ───────────────────────────── */
+/* Badge */
 .badge-custom {
   font-family: var(--font);
   font-size: 13px;
@@ -336,9 +332,8 @@ h1 {
 .badge-green { background: rgba(122,158,82,.15); color: var(--yerba); border: 1px solid rgba(122,158,82,.35); }
 .badge-warm  { background: rgba(184,148,94,.1);  color: var(--tierra); border: 1px solid rgba(184,148,94,.25); }
 
-/* ══════════════════════════════════════════════════════════════
-   GALLERY — solo nombre y país
-   ══════════════════════════════════════════════════════════════ */
+/* GALLERY — solo nombre y país ──────────────────────────────────────────────────────*/
+
 .gallery-grid { display: flex; flex-direction: column; gap: 8px; }
 
 .gallery-card {
@@ -388,9 +383,9 @@ h1 {
 }
 @keyframes shimmer { to { background-position: -200% 0; } }
 
-/* ══════════════════════════════════════════════════════════════
-   FORM
-   ══════════════════════════════════════════════════════════════ */
+
+/*FORM ──────────────────────────────────────────────────────*/
+
 .form-desc { display: none; }
 
 .form-section-title {
@@ -506,9 +501,8 @@ h1 {
 }
 .btn-submit-main:disabled { opacity: .55; cursor: not-allowed; transform: none; }
 
-/* ══════════════════════════════════════════════════════════════
-   POPUP & LIGHTBOX
-   ══════════════════════════════════════════════════════════════ */
+/* POPUP & LIGHTBOX ──────────────────────────────────────────────────────*/
+
 .globe-popup {
   position: fixed; z-index: 9999;
   background: rgba(12,13,10,.96); border: 1px solid var(--border);
@@ -585,9 +579,8 @@ h1 {
 }
 .lightbox-close:hover { background: rgba(255,255,255,.1); }
 
-/* ══════════════════════════════════════════════════════════════
-   HEADER STATS
-   ══════════════════════════════════════════════════════════════ */
+/* HEADER STATS ──────────────────────────────────────────────────────*/
+
 .header-stats {
   display: flex; align-items: center; gap: 14px;
   background: var(--dark-3);
@@ -611,9 +604,8 @@ h1 {
 }
 .hstat-sep { font-size: 18px; color: var(--border); user-select: none; line-height: 1; }
 
-/* ══════════════════════════════════════════════════════════════
-   SUCCESS MODAL
-   ══════════════════════════════════════════════════════════════ */
+/*SUCCESS MODAL ──────────────────────────────────────────────────────*/
+
 .smodal {
   position: fixed; inset: 0; z-index: 11000;
   display: flex; align-items: center; justify-content: center;
@@ -708,9 +700,8 @@ h1 {
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
 
-/* ══════════════════════════════════════════════════════════════
-   RESPONSIVE
-   ══════════════════════════════════════════════════════════════ */
+/*RESPONSIVE ──────────────────────────────────────────────────────*/
+
 @media (max-width: 768px) {
   .main-layout { flex-direction: column; height: auto; }
   .globe-section { height: 55vw; min-height: 260px; max-height: 380px; flex: none; }
