@@ -228,12 +228,11 @@ function rebuildCountrySelect(lang) {
   const sel = document.getElementById("country");
   if (!sel) return;
 
-  const currentVal = sel.value; // preservar selección
+  const currentVal = sel.value; 
 
-  // Limpiar todo
+
   sel.innerHTML = "";
 
-  // Placeholder (disabled)
   const ph = document.createElement("option");
   ph.value    = "";
   ph.disabled = true;
@@ -241,29 +240,25 @@ function rebuildCountrySelect(lang) {
   ph.textContent = COUNTRY_PLACEHOLDER[lang] || COUNTRY_PLACEHOLDER.en;
   sel.appendChild(ph);
 
-  // Opciones ordenadas por nombre localizado
   const sorted = [...COUNTRIES].sort((a, b) =>
     getCountryName(a, lang).localeCompare(getCountryName(b, lang), lang)
   );
 
   sorted.forEach(c => {
     const opt = document.createElement("option");
-    opt.value        = c.name;          // ← siempre inglés como key (consistente con DB)
+    opt.value        = c.name;          
     opt.dataset.iso3 = c.iso3;
     opt.textContent  = `${c.flag} ${getCountryName(c, lang)}`;
     if (c.name === currentVal) opt.selected = true;
     sel.appendChild(opt);
   });
 
-  // Color del placeholder vs selección real
+
   sel.classList.toggle("is-placeholder", !currentVal || currentVal === "");
 }
 
-// ─────────────────────────────────────────────────────────────
-// Escuchar cambios para actualizar clase is-placeholder
-// ─────────────────────────────────────────────────────────────
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Construir con idioma inicial (lee de tu i18n o defecto "es")
   const initLang = (typeof currentLang !== "undefined" ? currentLang : null)
                 || localStorage.getItem("lang")
                 || "es";
