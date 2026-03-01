@@ -10,6 +10,7 @@ document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.add("active");
     document.documentElement.lang = currentLang;
     applyI18n();
+    rebuildCountrySelect(currentLang); // ← esta línea faltaba
   });
 });
 
@@ -46,10 +47,6 @@ async function loadMates() {
     renderArcs(matesWithCoords);
     renderGallery();
     updateStats();
-
-    // ── CAMBIO: eliminado el pointOfView automático que reposicionaba
-    // el globo cada 30s al primer mate. El reposicionamiento ahora solo
-    // ocurre cuando el usuario envía su propio mate (ver form.js).
 
   } catch (err) {
     console.error("loadMates error:", err);

@@ -73,7 +73,8 @@
       <!-- Gallery -->
       <div class="panel-block">
         <h2 class="panel-title">
-          <span data-i18n="recentMates"></span></h2>
+          <span data-i18n="recentMates"></span>
+        </h2>
         <div id="gallery" class="gallery-grid">
           <div class="skeleton-card"></div>
           <div class="skeleton-card"></div>
@@ -84,8 +85,9 @@
 
       <!-- Form -->
       <div class="panel-block">
-        <h2 class="panel-title" >
-          <span data-i18n="formTitle"></span></h2>
+        <h2 class="panel-title">
+          <span data-i18n="formTitle"></span>
+        </h2>
         <div id="gpsStatus" class="gps-status" data-i18n="gpsRequesting"></div>
 
         <form id="mateForm" novalidate>
@@ -97,8 +99,9 @@
             <input type="text" id="name" class="field-input" data-i18n-placeholder="placeholderName" placeholder="" required>
           </div>
 
+          <!-- PAÍS — select poblado por data/countries.js -->
           <div class="field-group">
-            <input type="text" id="country" class="field-input" data-i18n-placeholder="placeholderCountry" placeholder="" required>
+            <select id="country" class="field-input" required></select>
           </div>
 
           <div class="field-group">
@@ -108,10 +111,10 @@
           <div class="field-group">
             <label class="field-label" data-i18n="labelPrep"></label>
             <div class="prep-toggle">
-              <button type="button" class="prep-btn active" data-val="amargo" id="btnAmargo" data-i18n="bitter"></button>
-              <button type="button" class="prep-btn" data-val="dulce" id="btnDulce" data-i18n="sweet"></button>
-              <button type="button" class="prep-btn" data-val="tereré" id="btnTerere" data-i18n="terere"></button>
-              <button type="button" class="prep-btn" data-val="Mate Cocido" id="btnMateTea" data-i18n="brewedMateTea"></button>
+              <button type="button" class="prep-btn active" data-val="amargo"      id="btnAmargo"  data-i18n="bitter"></button>
+              <button type="button" class="prep-btn"        data-val="dulce"       id="btnDulce"   data-i18n="sweet"></button>
+              <button type="button" class="prep-btn"        data-val="tereré"      id="btnTerere"  data-i18n="terere"></button>
+              <button type="button" class="prep-btn"        data-val="Mate Cocido" id="btnMateTea" data-i18n="brewedMateTea"></button>
             </div>
             <input type="hidden" id="preparation" value="amargo">
           </div>
@@ -130,7 +133,7 @@
               <div class="file-drop-inner" id="fileDropInner">
                 <i class="bi bi-camera file-icon-bs"></i>
                 <span class="file-text" data-i18n="fileDropText"></span>
-                <span class="file-sub" data-i18n="fileDropSub"></span>
+                <span class="file-sub"  data-i18n="fileDropSub"></span>
               </div>
               <img id="photoPreview" class="photo-preview" style="display:none" alt="preview">
             </div>
@@ -173,13 +176,12 @@
         <div class="smodal-glow"></div>
       </div>
       <div class="smodal-body">
-        <h3 class="smodal-title" data-i18n="successTitle"></h3>
-        <p class="smodal-body1" data-i18n="successBody1"></p>
+        <h3 class="smodal-title"  data-i18n="successTitle"></h3>
+        <p  class="smodal-body1"  data-i18n="successBody1"></p>
         <div class="smodal-divider"></div>
-        <p class="smodal-body2" data-i18n="successBody2"></p>
+        <p  class="smodal-body2"  data-i18n="successBody2"></p>
         <button class="smodal-btn" data-i18n="successBtn"></button>
       </div>
-      
     </div>
   </div>
 
@@ -195,13 +197,23 @@
       </div>
       <div class="drop-content">
         <div class="drop-pane active" id="tab-about">
-          <p data-i18n="aboutText1"></p><p data-i18n="aboutText2"></p><p data-i18n="aboutText3"></p><p data-i18n="aboutText4"></p>
+          <p data-i18n="aboutText1"></p>
+          <p data-i18n="aboutText2"></p>
+          <p data-i18n="aboutText3"></p>
+          <p data-i18n="aboutText4"></p>
         </div>
         <div class="drop-pane" id="tab-support">
-          <p data-i18n="supportText1"></p><p data-i18n="supportText2"></p>
+          <p data-i18n="supportText1"></p>
+          <p data-i18n="supportText2"></p>
         </div>
         <div class="drop-pane" id="tab-moderation">
-          <p data-i18n="modText1"></p><p data-i18n="modText2"></p><p data-i18n="modText3"></p><p data-i18n="modText4"></p><p data-i18n="modText5"></p><p data-i18n="modText6"></p><p data-i18n="modText7"></p>
+          <p data-i18n="modText1"></p>
+          <p data-i18n="modText2"></p>
+          <p data-i18n="modText3"></p>
+          <p data-i18n="modText4"></p>
+          <p data-i18n="modText5"></p>
+          <p data-i18n="modText6"></p>
+          <p data-i18n="modText7"></p>
         </div>
         <div class="drop-pane" id="tab-press">
           <p data-i18n="pressText1"></p>
@@ -250,6 +262,7 @@
   <script src="config/constants.js"></script>
   <script src="data/iso-tables.js"></script>
   <script src="data/capital-coords.js"></script>
+  <script src="data/countries.js"></script>
   <script src="modules/state.js"></script>
   <script src="modules/utils.js"></script>
   <script src="modules/globe.js"></script>
