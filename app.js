@@ -10,7 +10,7 @@ document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.add("active");
     document.documentElement.lang = currentLang;
     applyI18n();
-    rebuildCountrySelect(currentLang); // ← esta línea faltaba
+    rebuildCountrySelect(currentLang); 
   });
 });
 
